@@ -15,7 +15,7 @@ const store = {};
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <Route path="/cookbook-app" component={App} />
+      <Route path="/" component={App} />
     </Router>
   </Provider>, document.getElementById('root')
 );

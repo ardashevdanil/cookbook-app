@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test ItemsList component renders correctly 1`] = `
+"<div className=\\"ItemsList\\">
+  <Item content={{...}} />
+  <Item content={{...}} />
+  <Item content={{...}} />
+  <Item content={{...}} />
+  <Item content={{...}} />
+</div>"
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test NavMenu component renders correctly 1`] = `
+"<div className=\\"NavMenu\\">
+  <div className=\\"NavMenu__logo\\" />
+  <div className=\\"NavMenu__desktop-navbar\\">
+    <NavBar />
+  </div>
+  <SearchBar history={[undefined]} location={[undefined]} />
+  <div className=\\"NavMenu__mobile-navbar\\">
+    <div className=\\"NavMenu__dropdown\\" style={{...}}>
+      <NavBar />
+    </div>
+    <FontAwesomeIcon icon={{...}} onClick={[Function: bound handleDropdownClick]} border={false} className=\\"\\" mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} transform={{...}} />
+  </div>
+</div>"
+`;

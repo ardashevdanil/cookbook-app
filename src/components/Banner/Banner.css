@@ -1,0 +1,118 @@
+.Banner {
+  margin: 81px 0;
+  box-shadow: 0 0 13px 0 rgba(11, 12, 12, 0.15);
+  background: no-repeat center right;
+  background-size: contain;
+  position: relative;
+  z-index: 1;
+}
+
+.Banner__content {
+  width: 370px;
+  padding: 52px 0 52px 94px;
+  background-color: #f8f8f8;
+}
+
+.Banner__logo {
+  height: 105px;
+  background: url(../../logo.png) no-repeat;
+  background-size: contain;
+}
+
+.Banner__name {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  color: #911026;
+  margin: 25px -2px;
+}
+
+.Banner__description {
+  width: 320px;
+  font-size: 15px;
+  margin-bottom: 27px;
+}
+
+.Banner__button {
+  height: 27px;
+  width: 103px;
+  border: solid 1px #c2c2c2;
+  font-size: 12px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+}
+
+.Banner__button:hover {
+  color: #911026;
+  border-color: #911026;
+}
+
+.Banner__img {
+  height: inherit;
+  width: 200px;
+}
+
+.Banner__change-menu {
+  width: 76px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+  right: 18px;
+}
+
+.Banner__circle {
+  width: 11.8%;
+  height: 90%;
+  border-radius: 100%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.Banner__circle:hover {
+  background-color: #555;
+}
+
+@media only screen and (max-width: 1120px) {
+  .Banner {
+    height: 63.4vw;
+    margin: 0 0 21.6vw 0;
+    box-shadow: none;
+    background: no-repeat center center;
+    background-size: cover;
+  }
+
+  .Banner__logo,
+  .Banner__name,
+  .Banner__description {
+    display: none;
+  }
+
+  .Banner__content {
+    width: auto;
+    padding: 0;
+    background: transparent;
+    position: relative;
+    top: 63.4vw;
+  }
+  
+  .Banner__button {
+    width: 100%;
+    height: 21.6vw;
+    border: none;
+    background-color: #f8f8f8;
+    font-size: 5.5vw;
+    display: block;
+    box-sizing: border-box;
+    padding-top: 7.5vw;
+  }
+
+  .Banner__change-menu {
+    width: 23.8vw;
+    height: 3.1vw;
+  }
+}

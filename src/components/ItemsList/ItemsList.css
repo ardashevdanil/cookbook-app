@@ -1,0 +1,14 @@
+.ItemsList {
+	padding: 18px 33px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: 0 0 13px 0 rgba(11, 12, 12, 0.15);
+}
+
+@media only screen and (max-width: 1120px) {
+  .ItemsList {
+    padding:  0;
+    box-shadow: none;
+  }
+}

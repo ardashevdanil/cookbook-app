@@ -1,0 +1,56 @@
+.Item {
+	width: 312px;
+	padding: 20px calc( (100% - 312px * 3)/6 );
+}
+
+.Item:hover {
+  cursor: pointer;
+  color: #911026;
+}
+
+.Item>img {
+	width: 100%;
+}
+
+.Item__name {
+	font-size: 16.5px;
+	margin-top: 9px;
+}
+
+.Item__stats {
+	font-size: 14px;
+	margin-top: 7.5px;
+}
+
+.Item svg {
+	height: 11px
+}
+
+@media only screen and (max-width: 1120px) {
+  .Item {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .Item>img {
+    height: 64.7vw;
+  }
+
+  .Item__name {
+    font-size: 5.2vw;
+    margin-top: 2.8vw;
+  }
+
+  .Item__stats {
+    font-size: 4.4vw;
+    margin-top: 2.3vw;
+  }
+
+  .Item svg {
+    height: 3.4vw;
+  }
+
+  .Item__description {
+    padding: 0 6.9vw;
+  }
+}

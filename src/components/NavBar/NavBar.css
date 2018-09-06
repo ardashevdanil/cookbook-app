@@ -1,0 +1,32 @@
+.NavBar {
+  width: 540px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 16px;
+}
+
+.NavBar__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.NavBar__link:hover {
+	text-decoration: underline;
+}
+
+@media only screen and (max-width: 1120px) {
+  .NavBar {
+    height: 49vw;
+    width: auto;
+    padding-top: 3.1vw;
+    padding-bottom: 8.4vw;
+    flex-direction: column;
+    font-size: 4vw;
+  }
+
+  .NavBar__link {
+    width: 100%;
+    text-align: right;
+  }
+}
