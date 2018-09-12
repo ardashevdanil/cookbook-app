@@ -1,0 +1,24 @@
+.PhotoItem {
+	width: 312px;
+	padding: 20px calc( (100% - 312px * 3)/6 );
+}
+
+.PhotoItem__img {
+  height: 190px;
+  overflow: hidden;
+}
+
+.PhotoItem img {
+	width: 100%;
+}
+
+@media only screen and (max-width: 1120px) {
+  .PhotoItem {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .PhotoItem>img {
+    height: 64.7vw;
+  }
+}

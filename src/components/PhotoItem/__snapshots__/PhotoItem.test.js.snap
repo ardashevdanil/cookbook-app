@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test PhotoItem component renders correctly 1`] = `
+"<div className=\\"PhotoItem\\">
+  <div className=\\"PhotoItem__img\\">
+    <img alt=\\"test\\" src=\\"\\" />
+  </div>
+</div>"
+`;

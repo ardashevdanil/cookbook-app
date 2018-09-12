@@ -9,8 +9,15 @@ import thunkMiddleware from 'redux-thunk';
 import './index.css';
 
 import App from './App';
+import cookbookApp from './reducers/combinedReducers';
 
-const store = {};
+const store = createStore(
+  cookbookApp,
+  applyMiddleware(
+    logger,
+    thunkMiddleware
+  )
+);
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test NavBar component renders correctly 1`] = `
+"<MemoryRouter>
+  <Router history={{...}}>
+    <Provider store={{...}}>
+      <Connect(NavBar) dispatch={[Function: dispatch]} onLinkClick={[Function: onLinkClick]}>
+        <NavBar dispatch={[Function: dispatch]} onLinkClick={[Function: onLinkClick]}>
+          <div className=\\"NavBar\\">
+            <Link to=\\"/cookbook-app\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
+              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/cookbook-app\\">
+                HOME
+              </a>
+            </Link>
+            <Link to=\\"/cookbook-app/recipes\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
+              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/cookbook-app/recipes\\">
+                RECIPES
+              </a>
+            </Link>
+            <Link to=\\"/cookbook-app/photos\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
+              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/cookbook-app/photos\\">
+                PHOTO GALLERIES
+              </a>
+            </Link>
+            <Link to=\\"/cookbook-app/videos\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
+              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/cookbook-app/videos\\">
+                VIDEOS
+              </a>
+            </Link>
+            <Link to=\\"/cookbook-app\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
+              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/cookbook-app\\">
+                ALL CATEGORIES
+              </a>
+            </Link>
+          </div>
+        </NavBar>
+      </Connect(NavBar)>
+    </Provider>
+  </Router>
+</MemoryRouter>"
+`;

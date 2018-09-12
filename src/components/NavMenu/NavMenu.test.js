@@ -8,7 +8,10 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('test NavMenu component', () => {
 	const component = Enzyme.shallow(
-		<NavMenu />
+		<NavMenu
+      history={ {} }
+      location={ {} }
+    />
 	);
 
 	test('renders correctly', () => {

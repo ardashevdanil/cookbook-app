@@ -8,7 +8,22 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('test Banner component', () => {
 	const component = Enzyme.shallow(
-		<Banner />
+		<Banner
+      items={[
+        {
+          comments: 0,
+          cookingTime: 0,
+          description: '',
+          difficult: '',
+          id: 0,
+          img: '',
+          ingridients: ['', ''],
+          name: 'test1',
+          videoId: '',
+          watched: 0,
+        },
+      ]}
+    />
 	);
 
 	test('renders correctly', () => {

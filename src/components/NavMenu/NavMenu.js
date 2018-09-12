@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import './NavMenu.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import NavBar from '../NavBar/NavBar';
-import SearchBar from '../SearchBar/SearchBar';
+import NavBar from '../../containers/NavBar/NavBar';
+import SearchBar from '../../containers/SearchBar/SearchBar';
 
 class NavMenu extends React.Component {
 	constructor(props) {
@@ -13,6 +14,7 @@ class NavMenu extends React.Component {
       isDropdownShown: false,
     }
     this.handleDropdownClick = this.handleDropdownClick.bind(this);
+    this.handleNavBarClick = this.handleNavBarClick.bind(this);
   }
 
   handleDropdownClick() {
@@ -21,6 +23,12 @@ class NavMenu extends React.Component {
         isDropdownShown: !prevState.isDropdownShown,
       }
     });
+  }
+
+  handleNavBarClick() {
+    this.setState({
+      isDropdownShown: false,
+    })
   }
 
   render() {
@@ -41,7 +49,9 @@ class NavMenu extends React.Component {
               display: this.state.isDropdownShown ? 'block' : 'none',
             }}
           >
-            <NavBar />
+            <NavBar 
+              onLinkClick={ this.handleNavBarClick }
+            />
           </div>
           <FontAwesomeIcon 
             icon={ faBars }
@@ -54,3 +64,8 @@ class NavMenu extends React.Component {
 }
 
 export default NavMenu;
+
+NavMenu.propTypes = {
+  history: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+}

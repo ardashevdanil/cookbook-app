@@ -1,9 +1,9 @@
 import React from 'react';
 import './Footer.css';
 
-import NavBar from '../NavBar/NavBar';
+import NavBar from '../../containers/NavBar/NavBar';
 
-function Footer(props) {
+function Footer() {
 	return(
 		<div className='Footer'>
 			<div className='Footer__logo'></div>

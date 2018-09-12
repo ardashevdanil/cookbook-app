@@ -1,12 +1,12 @@
-//import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import React from 'react';
-//import { BrowserRouter as Router } from 'react-router-dom';
 import './SearchBar.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-// import searchItems from '../../actions/searchItems';
-// import { selectCategory } from '../../actions/selectCategory';
+import searchItems from '../../actions/searchItems';
+import { selectCategory } from '../../actions/selectCategory';
 
 class SearchBar extends React.Component {
 
@@ -17,10 +17,10 @@ class SearchBar extends React.Component {
       value: '',
     }
     this.handleChange = this.handleChange.bind(this);
+    this.onBlur = this.onBlur.bind(this);
   }
 
   handleChange(e) {
-    /*
     clearInterval(this.state.timer);
 
     this.setState({
@@ -30,12 +30,14 @@ class SearchBar extends React.Component {
       value: e.target.value,
     });
 
-    if (this.props.location.pathname !== '/search') {
+    if (this.props.location.pathname !== '/cookbook-app/search') {
       this.props.dispatch( selectCategory('search') );
-      this.props.history.push('/search');
+      this.props.history.push('/cookbook-app/search');
     }
-    */
-    this.setState({value: e.target.value})
+  }
+
+  onBlur() {
+    this.setState({ value: '' })
   }
 
   render() {
@@ -43,6 +45,7 @@ class SearchBar extends React.Component {
   		<div className='SearchBar'>
   			<input 
   				className='SearchBar__input'
+          onBlur={ this.onBlur }
           onChange={ this.handleChange }
           type='text'
           value={ this.state.value }
@@ -56,5 +59,10 @@ class SearchBar extends React.Component {
   }
 }
 
-// export default connect()(SearchBar);
-export default SearchBar;
+export default connect()(SearchBar);
+
+SearchBar.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+}

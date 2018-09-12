@@ -8,7 +8,22 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('test Recipe component', () => {
   const component = Enzyme.shallow(
-    <Recipe />
+    <Recipe
+      content={
+        {
+          comments: 0,
+          cookingTime: 0,
+          description: '',
+          difficult: '',
+          directions: '',
+          id: 0,
+          img: '',
+          ingridients: ['', ''],
+          name: 'test1',
+          watched: 0,
+        }
+      }
+    />
   );
 
   test('renders correctly', () => {

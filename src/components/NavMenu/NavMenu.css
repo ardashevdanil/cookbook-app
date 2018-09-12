@@ -1,5 +1,6 @@
 .NavMenu {
 	height: 124px;
+  margin-bottom: 81px;
   padding: 0 94px;
   background-color: #f8f8f8;
 	display: flex;
@@ -24,6 +25,7 @@
     height: 31.9vw;
     min-height: 100px;
     padding: 0 9.1vw;
+    margin: 0;
     box-shadow: none;
   }
 

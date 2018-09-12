@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test RecipeContainer component renders correctly 1`] = `
+"<MemoryRouter>
+  <Router history={{...}}>
+    <Provider store={{...}}>
+      <withRouter(Connect(RecipeContainer))>
+        <Route>
+          <Connect(RecipeContainer) match={{...}} location={{...}} history={{...}} staticContext={[undefined]}>
+            <RecipeContainer match={{...}} location={{...}} history={{...}} staticContext={[undefined]} items={{...}} dispatch={[Function: dispatch]}>
+              <div>
+                <Route path=\\"/cookbook-app/recipe/0\\" render={[Function: render]} />
+              </div>
+            </RecipeContainer>
+          </Connect(RecipeContainer)>
+        </Route>
+      </withRouter(Connect(RecipeContainer))>
+    </Provider>
+  </Router>
+</MemoryRouter>"
+`;

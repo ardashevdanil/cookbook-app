@@ -2,34 +2,33 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import Enzyme from 'enzyme';
 
-import Item from '../Item/Item';
 import ItemsList from './ItemsList';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('test ItemsList component', () => {
+  const testItem = () => null;
 	const component = Enzyme.shallow(
 		<ItemsList
       isFetching={ false }
+      item = { testItem }
       items={[
         {
+          comments: 0,
+          cookingTime: 0,
+          description: '',
+          difficult: '',
+          id: 0,
           img: '',
-          name: {eng: 'test1', rus: 'тест1'},
-          price: {usd: 0, rub: 0},
-          tags: ['test1']
-        },
-        {
-          img: '',
-          name: {eng: 'test2', rus: 'тест2'},
-          price: {usd: 0, rub: 0},
-          tags: ['test2']
+          ingridients: ['', ''],
+          name: 'test1',
+          videoId: '',
+          watched: 0,
         },
       ]}
-      currency='usd'
-      inCart={ false }
+      history={ {} }
       location={{ pathname: '/test' }}
       onUpdate={ () => null }
-      pushCart={ () => null }
       selectedCategory='home'
     />
 	);
@@ -39,7 +38,7 @@ describe('test ItemsList component', () => {
 	});
 
   test('should render items', () => {
-    expect(component.find(Item).length).toBe(2);
+    expect(component.find(testItem).length).toBe(1);
   });
 
   test('should render empty list if there aren\'t items', () => {

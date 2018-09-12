@@ -5,21 +5,39 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import Enzyme from 'enzyme';
 
-import NavBar from './NavBar';
+import RecipeContainer from './RecipeContainer';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 const initialState = {
-  selectedCategory: 'home'
+  itemsByCategory: {
+    recipes: {
+      items:[
+        {
+          comments: 0,
+          cookingTime: 0,
+          description: '',
+          difficult: '',
+          id: 0,
+          img: '',
+          ingridients: ['', ''],
+          name: 'test1',
+          videoId: '',
+          watched: 0,
+        },
+      ],
+      isFetching: false
+    },
+  },
 }
 
 const store = configureStore()(initialState);
 
-describe('test NavBar component', () => {
+describe('test RecipeContainer component', () => {
 	const component = Enzyme.mount(
     <MemoryRouter>
   		<Provider store={store}>
-        <NavBar />
+        <RecipeContainer />
       </Provider>
     </MemoryRouter>
 	);

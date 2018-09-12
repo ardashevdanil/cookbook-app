@@ -2,10 +2,6 @@
 
 exports[`test ItemsList component renders correctly 1`] = `
 "<div className=\\"ItemsList\\">
-  <Item content={{...}} />
-  <Item content={{...}} />
-  <Item content={{...}} />
-  <Item content={{...}} />
-  <Item content={{...}} />
+  <testItem content={{...}} history={{...}} />
 </div>"
 `;

@@ -3,7 +3,7 @@
 exports[`test Footer component renders correctly 1`] = `
 "<div className=\\"Footer\\">
   <div className=\\"Footer__logo\\" />
-  <NavBar />
+  <Connect(NavBar) />
   <div className=\\"Footer__copyright\\">
     © 2016-2017 LEMON ALL RIGHT RESERVED
   </div>

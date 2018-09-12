@@ -4,12 +4,12 @@ exports[`test NavMenu component renders correctly 1`] = `
 "<div className=\\"NavMenu\\">
   <div className=\\"NavMenu__logo\\" />
   <div className=\\"NavMenu__desktop-navbar\\">
-    <NavBar />
+    <Connect(NavBar) />
   </div>
-  <SearchBar history={[undefined]} location={[undefined]} />
+  <Connect(SearchBar) history={{...}} location={{...}} />
   <div className=\\"NavMenu__mobile-navbar\\">
     <div className=\\"NavMenu__dropdown\\" style={{...}}>
-      <NavBar />
+      <Connect(NavBar) onLinkClick={[Function: bound handleNavBarClick]} />
     </div>
     <FontAwesomeIcon icon={{...}} onClick={[Function: bound handleDropdownClick]} border={false} className=\\"\\" mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} transform={{...}} />
   </div>

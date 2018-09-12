@@ -2,14 +2,14 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import Enzyme from 'enzyme';
 
-import Item from './Item';
+import PhotoItem from './PhotoItem';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('test Item component', () => {
+describe('test PhotoItem component', () => {
   const pushCart = jest.fn();
 	const component = Enzyme.shallow(
-		<Item
+		<PhotoItem
       content={{
         img: '',
         name: 'test',

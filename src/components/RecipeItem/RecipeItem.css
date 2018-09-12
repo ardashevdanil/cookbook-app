@@ -1,56 +1,61 @@
-.Item {
+.RecipeItem {
 	width: 312px;
 	padding: 20px calc( (100% - 312px * 3)/6 );
 }
 
-.Item:hover {
+.RecipeItem:hover {
   cursor: pointer;
   color: #911026;
 }
 
-.Item>img {
+.RecipeItem__img {
+  height: 190px;
+  overflow: hidden;
+}
+
+.RecipeItem img {
 	width: 100%;
 }
 
-.Item__name {
+.RecipeItem__name {
 	font-size: 16.5px;
 	margin-top: 9px;
 }
 
-.Item__stats {
+.RecipeItem__stats {
 	font-size: 14px;
 	margin-top: 7.5px;
 }
 
-.Item svg {
+.RecipeItem svg {
 	height: 11px
 }
 
 @media only screen and (max-width: 1120px) {
-  .Item {
+  .RecipeItem {
     width: 100%;
     padding-top: 0;
   }
 
-  .Item>img {
+  .RecipeItem>img {
     height: 64.7vw;
   }
 
-  .Item__name {
+  .RecipeItem__name {
     font-size: 5.2vw;
     margin-top: 2.8vw;
   }
 
-  .Item__stats {
+  .RecipeItem__stats {
     font-size: 4.4vw;
     margin-top: 2.3vw;
   }
 
-  .Item svg {
+  .RecipeItem svg {
     height: 3.4vw;
   }
 
-  .Item__description {
+  .RecipeItem__description {
     padding: 0 6.9vw;
   }
 }

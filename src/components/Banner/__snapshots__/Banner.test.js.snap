@@ -5,24 +5,19 @@ exports[`test Banner component renders correctly 1`] = `
   <div className=\\"Banner__content\\">
     <div className=\\"Banner__logo\\" />
     <div className=\\"Banner__name\\">
-      Bananas Foster Ice Cream Cake
+      test1
     </div>
-    <div className=\\"Banner__description\\">
-      If you&#39;re looking for decadence, look no 
-          further - you&#39;ve found the Hole Grail of desserts.
-          Honestly this cake makes us wonder why Bananas Foster
-          hasn&#39;t always been served on top of ice cream cake
-    </div>
-    <div className=\\"Banner__button\\">
+    <div className=\\"Banner__description\\" />
+    <Link className=\\"Banner__button\\" to=\\"/cookbook-app/recipe/0\\" replace={false}>
       GET IT RECIPE
-    </div>
+    </Link>
   </div>
   <div className=\\"Banner__change-menu\\">
-    <div className=\\"Banner__circle\\" />
-    <div className=\\"Banner__circle\\" />
-    <div className=\\"Banner__circle\\" />
-    <div className=\\"Banner__circle\\" />
-    <div className=\\"Banner__circle\\" />
+    <div className=\\"Banner__nav-button_active Banner__nav-button\\" onClick={[Function: onClick]} />
+    <div className=\\"Banner__nav-button\\" onClick={[Function: onClick]} />
+    <div className=\\"Banner__nav-button\\" onClick={[Function: onClick]} />
+    <div className=\\"Banner__nav-button\\" onClick={[Function: onClick]} />
+    <div className=\\"Banner__nav-button\\" onClick={[Function: onClick]} />
   </div>
 </div>"
 `;

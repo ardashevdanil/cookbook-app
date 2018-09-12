@@ -16,7 +16,11 @@ const store = configureStore()(initialState);
 describe('test SearchBar component', () => {
 	const component = Enzyme.mount(
 		<Provider store={store}>
-      <SearchBar />
+      <SearchBar
+        dispatch={ () => null }
+        history={ {} }
+        location={ {} }
+      />
     </Provider>
 	);
 

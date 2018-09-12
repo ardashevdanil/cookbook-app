@@ -3,52 +3,25 @@
 exports[`test Recipe component renders correctly 1`] = `
 "<div className=\\"Recipe\\">
   <div className=\\"Recipe__img\\">
-    <img src=\\"exampleImg.png\\" />
+    <img src=\\"\\" />
   </div>
   <div className=\\"Recipe__description\\">
     <div className=\\"Recipe__heading\\">
-      Bananas Foster Ice Cream Cake
+      test1
     </div>
     <div className=\\"Recipe__stats\\">
       <FontAwesomeIcon icon={{...}} border={false} className=\\"\\" mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} transform={{...}} />
-      15
+      0
       mins 
       <FontAwesomeIcon icon={{...}} border={false} className=\\"\\" mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} transform={{...}} />
        
-      Easy
     </div>
     <div className=\\"Recipe__text\\">
-      <p>
-        1 (8 ounce) container frozen whipped tapping, thawed
-      </p>
-      <p>
-        20 chocolate round wafers, divided
-      </p>
-      <p>
-        1 (7 1/4 ounce) bottle Smucker&#39;s Hot Dark Chocolat
-              Microwaveable Topping, divided
-      </p>
+      <p />
+      <p />
       <div className=\\"Recipe__heading Recipe__heading_small\\">
         Directions
       </div>
-      ARRANGE 8 to 9 ice cream sandwiches in 9-inch
-          square pan, cutting to form on even layer. Spread with half
-          of whipped tapping. Microwave 1 cup of chocolate
-          topping into small microwave-safe bowl on HIGH for 30 seconds
-          
-      Drizzle evenly over wafers.
-      TOP with remaining 8 to 9 ice cream
-          sandwiches to form an even layer.
-      
-          ARRANGE 8 to 9 ice cream sandwiches in 9-inch
-          square pan, cutting to form on even layer. Spread with half
-          of whipped tapping. Microwave 1 cup of chocolate
-          topping into small microwave-safe bowl on HIGH for 30 seconds
-          
-      Drizzle evenly over wafers.
-      TOP with remaining 8 to 9 ice cream
-          sandwiches to form an even layer.
-      
     </div>
   </div>
 </div>"

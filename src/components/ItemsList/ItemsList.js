@@ -4,41 +4,36 @@ import './ItemsList.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
-import Item from '../Item/Item';
 import exampleImg from './exampleImg.png';
 
 class ItemsList extends React.Component {
-
-	/*
+	
 	componentDidUpdate(prevProps) {
-		if (this.props.location.pathname !== prevProps.location.pathname) {
-			
-			if (this.props.location.pathname === '/') {
-				this.props.onUpdate('home');
-			} else {
-				this.props.onUpdate(this.props.location.pathname.slice(1));
+		if (this.props.location.pathname !== prevProps.location.pathname) { // Один
+																																				//
+			if (this.props.location.pathname === '/cookbook-app') {           // Большой
+				this.props.onUpdate('recipes');																	//
+			} else {																													//
+				this.props.onUpdate(this.props.location.pathname.slice(14));    // Костыль
 			}
 		}
 	}
-	*/
-
+	
 	render() {
-		const items = fakeData.map( (item, index) => {
+		const items = this.props.items.map( (item, index) => {
 			return (
-				<Item
+				<this.props.item
 					content={ item }
+					history={ this.props.history }
 					key={ index }
 				/>
 			)
 		})
-		/*
+		
 		if (this.props.isFetching) {
 			return (
 				<div 
-					className={ styles.emptyList }
-					style={{
-						minHeight: document.documentElement.clientHeight - 312
-					}}
+					className='ItemsList__empty-list'
 				>
 					<FontAwesomeIcon icon={ faCog } spin size='2x'/>
 				</div>
@@ -46,16 +41,13 @@ class ItemsList extends React.Component {
 		} else if (!items.length) {
 			return (
 				<div 
-					className={ styles.emptyList }
-					style={{
-						minHeight: document.documentElement.clientHeight - 312
-					}}
+					className='ItemsList__empty-list'
 				>
 					<div>No Matches</div>
 				</div>
 			)
 		}
-		*/
+		
 	
 		return (
 			<div 
@@ -69,65 +61,18 @@ class ItemsList extends React.Component {
 
 export default ItemsList;
 
-const fakeData = [
-	{
-		name: 'Raspberry & Cream Frozen Yogurt Pie',
-		cookingTime: 35,
-		comments: 7,
-		watched: 14,
-		img: exampleImg,
-	},
-	{
-		name: 'Raspberry & Cream Frozen Yogurt Pie',
-		cookingTime: 35,
-		comments: 7,
-		watched: 14,
-		img: exampleImg,
-	},
-	{
-		name: 'Raspberry & Cream Frozen Yogurt Pie',
-		cookingTime: 35,
-		comments: 7,
-		watched: 14,
-		img: exampleImg,
-	},
-	{
-		name: 'Raspberry & Cream Frozen Yogurt Pie',
-		cookingTime: 35,
-		comments: 7,
-		watched: 14,
-		img: exampleImg,
-	},
-	{
-		name: 'Raspberry & Cream Frozen Yogurt Pie',
-		cookingTime: 35,
-		comments: 7,
-		watched: 14,
-		img: exampleImg,
-	},
-]
-
-/*
 ItemsList.propTypes = {
-	currency: PropTypes.string.isRequired,
 	isFetching: PropTypes.bool,
 	items: PropTypes.arrayOf(
-		PropTypes.shape({
-			img: PropTypes.string,
-			name: PropTypes.shape({
-				eng: PropTypes.string,
-				rus: PropTypes.string,
-			}),
-			price: PropTypes.shape({
-				usd: PropTypes.number,
-				rub: PropTypes.number,
-			}),
-			tags: PropTypes.arrayOf(PropTypes.string)
-		})
-	).isRequired,
+    PropTypes.shape({
+      cookingTime: PropTypes.number,
+      id: PropTypes.number.isRequired,
+      img: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      videoId: PropTypes.string,
+    }).isRequired
+  ).isRequired,
 	location: PropTypes.object,
 	onUpdate: PropTypes.func.isRequired,
-	pushCart: PropTypes.func.isRequired,
 	selectedCategory: PropTypes.string.isRequired,
 }
-*/

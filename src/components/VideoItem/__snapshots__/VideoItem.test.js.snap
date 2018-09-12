@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test VideoItem component renders correctly 1`] = `
+"<div className=\\"VideoItem\\">
+  <div className=\\"VideoItem__video\\">
+    <YouTube videoId=\\"\\" opts={{...}} id={{...}} className={{...}} containerClassName=\\"\\" onReady={[Function: onReady]} onError={[Function: onError]} onPlay={[Function: onPlay]} onPause={[Function: onPause]} onEnd={[Function: onEnd]} onStateChange={[Function: onStateChange]} onPlaybackRateChange={[Function: onPlaybackRateChange]} onPlaybackQualityChange={[Function: onPlaybackQualityChange]} />
+  </div>
+</div>"
+`;

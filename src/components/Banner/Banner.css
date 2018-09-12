@@ -1,4 +1,5 @@
 .Banner {
+  height: 471px;
   margin: 81px 0;
   box-shadow: 0 0 13px 0 rgba(11, 12, 12, 0.15);
   background: no-repeat center right;
@@ -8,6 +9,7 @@
 }
 
 .Banner__content {
+  min-height: calc(100% - 104px);
   width: 370px;
   padding: 52px 0 52px 94px;
   background-color: #f8f8f8;
@@ -38,6 +40,8 @@
   border: solid 1px #c2c2c2;
   font-size: 12px;
   text-align: center;
+  text-decoration: none;
+  color: inherit;
   display: table-cell;
   vertical-align: middle;
   cursor: pointer;
@@ -47,11 +51,6 @@
 .Banner__button:hover {
   color: #911026;
   border-color: #911026;
-}
-
-.Banner__img {
-  height: inherit;
-  width: 200px;
 }
 
 .Banner__change-menu {
@@ -65,7 +64,7 @@
   right: 18px;
 }
 
-.Banner__circle {
+.Banner__nav-button {
   width: 11.8%;
   height: 90%;
   border-radius: 100%;
@@ -73,7 +72,7 @@
   cursor: pointer;
 }
 
-.Banner__circle:hover {
+.Banner__nav-button:hover, .Banner__nav-button_active {
   background-color: #555;
 }
 
