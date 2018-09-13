@@ -4,8 +4,8 @@ exports[`test NavBar component renders correctly 1`] = `
 "<MemoryRouter>
   <Router history={{...}}>
     <Provider store={{...}}>
-      <Connect(NavBar) dispatch={[Function: dispatch]} onLinkClick={[Function: onLinkClick]}>
-        <NavBar dispatch={[Function: dispatch]} onLinkClick={[Function: onLinkClick]}>
+      <Connect(NavBar)>
+        <NavBar dispatch={[Function: dispatch]}>
           <div className=\\"NavBar\\">
             <Link to=\\"/cookbook-app\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
               <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/cookbook-app\\">

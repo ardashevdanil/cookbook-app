@@ -14,7 +14,6 @@ class NavMenu extends React.Component {
       isDropdownShown: false,
     }
     this.handleDropdownClick = this.handleDropdownClick.bind(this);
-    this.handleNavBarClick = this.handleNavBarClick.bind(this);
   }
 
   handleDropdownClick() {
@@ -23,12 +22,6 @@ class NavMenu extends React.Component {
         isDropdownShown: !prevState.isDropdownShown,
       }
     });
-  }
-
-  handleNavBarClick() {
-    this.setState({
-      isDropdownShown: false,
-    })
   }
 
   render() {
@@ -45,13 +38,12 @@ class NavMenu extends React.Component {
         <div className='NavMenu__mobile-navbar'>
           <div
             className='NavMenu__dropdown'
+            onClick={ () => this.handleDropdownClick() }
             style={{
               display: this.state.isDropdownShown ? 'block' : 'none',
             }}
           >
-            <NavBar 
-              onLinkClick={ this.handleNavBarClick }
-            />
+            <NavBar />
           </div>
           <FontAwesomeIcon 
             icon={ faBars }

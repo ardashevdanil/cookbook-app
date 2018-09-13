@@ -3,7 +3,7 @@
 exports[`test Recipe component renders correctly 1`] = `
 "<div className=\\"Recipe\\">
   <div className=\\"Recipe__img\\">
-    <img src=\\"\\" />
+    <img alt=\\"test1\\" src=\\"\\" />
   </div>
   <div className=\\"Recipe__description\\">
     <div className=\\"Recipe__heading\\">

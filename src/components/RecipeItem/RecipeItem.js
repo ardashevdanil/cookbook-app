@@ -43,7 +43,8 @@ RecipeItem.propTypes = {
 		img: PropTypes.string.isRequired,
 		name: PropTypes.string.isRequired,
 		cookingTime: PropTypes.number.isRequired,
-	})
+	}).isRequired,
+	history: PropTypes.object.isRequired,
 }
 
 export default RecipeItem;

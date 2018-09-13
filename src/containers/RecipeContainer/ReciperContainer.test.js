@@ -45,4 +45,8 @@ describe('test RecipeContainer component', () => {
 	test('renders correctly', () => {
 		expect(component.debug()).toMatchSnapshot();
 	});
+
+  test('should return routes', () => {
+    expect(component.find('div').at(0).children().length).toBe(1);
+  });
 })

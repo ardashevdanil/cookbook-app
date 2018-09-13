@@ -16,7 +16,18 @@ describe('test Banner component', () => {
           description: '',
           difficult: '',
           id: 0,
-          img: '',
+          img: '/test',
+          ingridients: ['', ''],
+          name: 'test1',
+          videoId: '',
+          watched: 0,
+        }, {
+          comments: 0,
+          cookingTime: 0,
+          description: '',
+          difficult: '',
+          id: 0,
+          img: '/test',
           ingridients: ['', ''],
           name: 'test1',
           videoId: '',
@@ -29,4 +40,14 @@ describe('test Banner component', () => {
 	test('renders correctly', () => {
 		expect(component.debug()).toMatchSnapshot();
 	});
+
+  test('changes state.activeBanner after click on nav button', () => {
+    let states = [];
+
+    states.push( component.state().selectedBanner );
+    component.find('.Banner__nav-button').at(1).simulate('click');
+    states.push( component.state().selectedBanner );
+    
+    expect(states).toEqual( [0, 1] )
+  });
 })

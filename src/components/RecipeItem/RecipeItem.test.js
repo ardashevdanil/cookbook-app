@@ -7,13 +7,16 @@ import RecipeItem from './RecipeItem';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('test RecipeItem component', () => {
-  const pushCart = jest.fn();
+  const push = jest.fn();
 	const component = Enzyme.shallow(
 		<RecipeItem
       content={{
         cookingTime: 0,
         img: '',
         name: 'test',
+      }}
+      history={{
+        push: push
       }}
     />
 	);
@@ -22,11 +25,9 @@ describe('test RecipeItem component', () => {
 		expect(component.debug()).toMatchSnapshot();
 	});
 
-  /*
-  test('calls pushCart after click on the cart button', () => {
-    component.find('div').at(6).simulate('click');
+  test('calls history.push after click on self', () => {
+    component.find('.RecipeItem').at(0).simulate('click');
 
-    expect(pushCart.mock.calls.length).toBe(1);
+    expect(push.mock.calls.length).toBe(1);
   })
-  */
 })

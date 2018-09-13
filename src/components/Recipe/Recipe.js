@@ -14,7 +14,10 @@ function Recipe(props) {
   return(
     <div className='Recipe'>
       <div className='Recipe__img'>
-        <img src={ props.content.img } />
+        <img
+          alt={ props.content.name }
+          src={ props.content.img }
+        />
       </div>
       <div className='Recipe__description'>
         <div className='Recipe__heading'>

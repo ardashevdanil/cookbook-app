@@ -9,7 +9,6 @@ import Footer from './components/Footer/Footer';
 import ItemsListContainer from './containers/ItemsListContainer/ItemsListContainer';
 import NavMenu from './components/NavMenu/NavMenu';
 import PhotoItem from './components/PhotoItem/PhotoItem';
-import Recipe from './components/Recipe/Recipe';
 import RecipeContainer from './containers/RecipeContainer/RecipeContainer';
 import RecipeItem from './components/RecipeItem/RecipeItem';
 import VideoItem from './components/VideoItem/VideoItem';
@@ -17,7 +16,10 @@ import VideoItem from './components/VideoItem/VideoItem';
 class App extends Component {
 
   componentDidMount() {
-    //this.props.history.push('/cookbook-app');
+    if ( this.props.location.pathname === '/' ) {
+      this.props.history.push('/cookbook-app');
+    }
+    
     this.props.dispatch( fetchItems('recipes') );
   }
 

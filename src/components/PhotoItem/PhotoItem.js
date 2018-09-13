@@ -12,7 +12,6 @@ function PhotoItem(props) {
 					src={ props.content.img }
 				/>
 			</div>
-			
 		</div>
 	);
 }

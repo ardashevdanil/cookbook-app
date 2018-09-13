@@ -12,7 +12,7 @@
 .Footer__logo {
   height: 36px;
 	width: 87px;
-  background: url('./logoDark.png');
+  background: url('./img/logoDark.png');
   background-size: cover;
 }
 

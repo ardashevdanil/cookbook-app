@@ -19,10 +19,7 @@ describe('test NavBar component', () => {
 	const component = Enzyme.mount(
     <MemoryRouter>
   		<Provider store={store}>
-        <NavBar
-          dispatch={ () => null }
-          onLinkClick={ () => null }
-        />
+        <NavBar />
       </Provider>
     </MemoryRouter>
 	);

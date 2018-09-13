@@ -3,8 +3,6 @@ import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import './Banner.css';
 
-import exampleImg from './exampleImg.png';
-
 class Banner extends React.Component {
   constructor(props) {
     super(props);

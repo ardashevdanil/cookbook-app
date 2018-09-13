@@ -45,5 +45,11 @@ describe('test ItemsList component', () => {
     component.setProps({ items: [] });
 
     expect(component.find('div').at(1).text()).toBe('No Matches');
-  })
+  });
+
+  test('should render loading svg if items is fetching', () => {
+    component.setProps({ isFetching: true });
+
+    expect(component.find('.ItemsList__empty-list').length).toBe(1);
+  });
 })

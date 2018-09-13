@@ -4,7 +4,6 @@ import './ItemsList.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
-import exampleImg from './exampleImg.png';
 
 class ItemsList extends React.Component {
 	
@@ -64,13 +63,7 @@ export default ItemsList;
 ItemsList.propTypes = {
 	isFetching: PropTypes.bool,
 	items: PropTypes.arrayOf(
-    PropTypes.shape({
-      cookingTime: PropTypes.number,
-      id: PropTypes.number.isRequired,
-      img: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      videoId: PropTypes.string,
-    }).isRequired
+    PropTypes.object.isRequired
   ).isRequired,
 	location: PropTypes.object,
 	onUpdate: PropTypes.func.isRequired,

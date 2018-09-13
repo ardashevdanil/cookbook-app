@@ -20,12 +20,4 @@ describe('test VideoItem component', () => {
 	test('renders correctly', () => {
 		expect(component.debug()).toMatchSnapshot();
 	});
-
-  /*
-  test('calls pushCart after click on the cart button', () => {
-    component.find('div').at(6).simulate('click');
-
-    expect(pushCart.mock.calls.length).toBe(1);
-  })
-  */
 })
