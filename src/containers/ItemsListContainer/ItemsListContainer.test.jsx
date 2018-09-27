@@ -11,7 +11,7 @@ Enzyme.configure({ adapter: new Adapter() });
 const initialState = {
   itemsByCategory: {
     test1: {
-      items:[
+      items: [
         {
           comments: 0,
           cookingTime: 0,
@@ -25,10 +25,10 @@ const initialState = {
           watched: 0,
         },
       ],
-      isFetching: false
+      isFetching: false,
     },
     test2: {
-      items:[
+      items: [
         {
           comments: 0,
           cookingTime: 0,
@@ -42,22 +42,21 @@ const initialState = {
           watched: 0,
         },
       ],
-      isFetching: true
-    }
+      isFetching: true,
+    },
   },
-  selectedCategory: 'test1'
-}
+  selectedCategory: 'test1',
+};
 
 describe('test ItemsListContainer component', () => {
-
-	test('should pass items by category', () => {
+  test('should pass items by category', () => {
     const component = mountComponentWithStore(
       ItemsListContainer,
       initialState,
-      { item: () => null }
+      { item: () => null },
     );
 
-		expect(component.children().at(0).props().items)
+    expect(component.children().at(0).props().items)
       .toEqual(
         [
           {
@@ -71,18 +70,17 @@ describe('test ItemsListContainer component', () => {
             name: 'test1',
             videoId: '',
             watched: 0,
-          }
-        ]
+          },
+        ],
       );
-
-	});
+  });
 
   test('should pass empty array if there isn\'t such category', () => {
     initialState.selectedCategory = 'someCategory';
     const component = mountComponentWithStore(
       ItemsListContainer,
       initialState,
-      { item: () => null }
+      { item: () => null },
     );
 
     expect(component.children().at(0).props().items).toEqual([]);
@@ -96,7 +94,7 @@ function mountComponentWithStore(Component, state, props) {
   const wrapper = Enzyme.mount(
     <Provider store={store}>
       <Component {...props} />
-    </Provider>
+    </Provider>,
   );
 
   return wrapper.find(Component);

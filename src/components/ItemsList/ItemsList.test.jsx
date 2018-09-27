@@ -8,10 +8,10 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('test ItemsList component', () => {
   const testItem = () => null;
-	const component = Enzyme.shallow(
-		<ItemsList
-      isFetching={ false }
-      item = { testItem }
+  const component = Enzyme.shallow(
+    <ItemsList
+      isFetching={false}
+      item={testItem}
       items={[
         {
           comments: 0,
@@ -26,16 +26,16 @@ describe('test ItemsList component', () => {
           watched: 0,
         },
       ]}
-      history={ {} }
+      history={{}}
       location={{ pathname: '/test' }}
-      onUpdate={ () => null }
-      selectedCategory='home'
-    />
-	);
+      onUpdate={() => null}
+      selectedCategory="home"
+    />,
+  );
 
-	test('renders correctly', () => {
-		expect(component.debug()).toMatchSnapshot();
-	});
+  test('renders correctly', () => {
+    expect(component.debug()).toMatchSnapshot();
+  });
 
   test('should render items', () => {
     expect(component.find(testItem).length).toBe(1);
@@ -52,4 +52,4 @@ describe('test ItemsList component', () => {
 
     expect(component.find('.ItemsList__empty-list').length).toBe(1);
   });
-})
+});

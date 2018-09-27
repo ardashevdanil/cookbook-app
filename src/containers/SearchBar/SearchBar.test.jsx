@@ -8,23 +8,21 @@ import SearchBar from './SearchBar';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-const initialState = {
-  searchValue: '',
-}
+const initialState = { searchValue: '' };
 const store = configureStore()(initialState);
 
 describe('test SearchBar component', () => {
-	const component = Enzyme.mount(
-		<Provider store={store}>
+  const component = Enzyme.mount(
+    <Provider store={store}>
       <SearchBar
-        dispatch={ () => null }
-        history={ {} }
-        location={ {} }
+        dispatch={() => null}
+        history={{}}
+        location={{}}
       />
-    </Provider>
-	);
+    </Provider>,
+  );
 
-	test('renders correctly', () => {
-		expect(component.debug()).toMatchSnapshot();
-	});
-})
+  test('renders correctly', () => {
+    expect(component.debug()).toMatchSnapshot();
+  });
+});

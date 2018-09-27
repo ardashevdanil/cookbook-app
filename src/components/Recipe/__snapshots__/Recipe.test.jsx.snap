@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Recipe component renders correctly 1`] = `
+"<div className=\\"Recipe\\">
+  <div className=\\"Recipe__img\\">
+    <img alt=\\"test1\\" src=\\"\\" />
+  </div>
+  <div className=\\"Recipe__description\\">
+    <div className=\\"Recipe__heading\\">
+      test1
+    </div>
+    <div className=\\"Recipe__stats\\">
+      <FontAwesomeIcon icon={{...}} border={false} className=\\"\\" mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} title=\\"\\" transform={{...}} />
+      0
+      mins 
+      <FontAwesomeIcon icon={{...}} border={false} className=\\"\\" mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} title=\\"\\" transform={{...}} />
+       
+    </div>
+    <div className=\\"Recipe__text\\">
+      <p>
+        a
+      </p>
+      <p>
+        b
+      </p>
+      <div className=\\"Recipe__heading Recipe__heading_small\\">
+        Directions
+      </div>
+    </div>
+  </div>
+</div>"
+`;

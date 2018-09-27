@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test RecipeItem component renders correctly 1`] = `
-"<div className=\\"RecipeItem\\" onClick={[Function: handleClick]}>
+"<div className=\\"RecipeItem\\" onClick={[Function: handleClick]} role=\\"button\\">
   <div className=\\"RecipeItem__img\\">
     <img alt=\\"test\\" src=\\"\\" />
   </div>
@@ -10,9 +10,9 @@ exports[`test RecipeItem component renders correctly 1`] = `
       test
     </div>
     <div className=\\"RecipeItem__stats\\">
-      <FontAwesomeIcon icon={{...}} border={false} className=\\"\\" mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} transform={{...}} />
+      <FontAwesomeIcon icon={{...}} border={false} className=\\"\\" mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} title=\\"\\" transform={{...}} />
       0
-       mins
+      mins
     </div>
   </div>
 </div>"

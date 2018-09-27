@@ -5,7 +5,7 @@ import selectedCategory from './selectedCategory/selectedCategory';
 
 const cookbookApp = combineReducers({
   itemsByCategory,
-  selectedCategory
+  selectedCategory,
 });
 
 export default cookbookApp;

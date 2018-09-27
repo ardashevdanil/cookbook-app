@@ -2,14 +2,13 @@ import { RECEIVE_ITEMS } from '../../actions/receiveItems';
 import { REQUEST_ITEMS } from '../../actions/requestItems';
 
 function items(
-  state={
+  state = {
     isFetching: false,
-    items: []
+    items: [],
   },
-  action
+  action,
 ) {
   switch (action.type) {
-
     case REQUEST_ITEMS:
       return Object.assign({}, state, {
         isFetching: true,
@@ -19,25 +18,25 @@ function items(
       return Object.assign({}, state, {
         isFetching: false,
         items: action.items,
-        lastUpdated: action.receivedAt
+        lastUpdated: action.receivedAt,
       });
 
     default:
-      return state
+      return state;
   }
 }
 
-function itemsByCategory(state={}, action) {
-  switch(action.type) {
-
+function itemsByCategory(state = {}, action) {
+  switch (action.type) {
     case RECEIVE_ITEMS:
     case REQUEST_ITEMS:
-      return Object.assign({}, state, {
-        [action.category]: items(state[action.category], action)
-      })
+      return {
+        ...state,
+        ...{ [action.category]: items(state[action.category], action) },
+      };
 
     default:
-      return state
+      return state;
   }
 }
 

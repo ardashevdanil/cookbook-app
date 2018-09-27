@@ -7,17 +7,16 @@ import PhotoItem from './PhotoItem';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('test PhotoItem component', () => {
-  const pushCart = jest.fn();
-	const component = Enzyme.shallow(
-		<PhotoItem
+  const component = Enzyme.shallow(
+    <PhotoItem
       content={{
         img: '',
         name: 'test',
       }}
-    />
-	);
+    />,
+  );
 
-	test('renders correctly', () => {
-		expect(component.debug()).toMatchSnapshot();
-	});
-})
+  test('renders correctly', () => {
+    expect(component.debug()).toMatchSnapshot();
+  });
+});

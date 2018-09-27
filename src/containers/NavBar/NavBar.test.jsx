@@ -10,21 +10,21 @@ import NavBar from './NavBar';
 Enzyme.configure({ adapter: new Adapter() });
 
 const initialState = {
-  selectedCategory: 'home'
-}
+  selectedCategory: 'home',
+};
 
 const store = configureStore()(initialState);
 
 describe('test NavBar component', () => {
-	const component = Enzyme.mount(
+  const component = Enzyme.mount(
     <MemoryRouter>
-  		<Provider store={store}>
+      <Provider store={store}>
         <NavBar />
       </Provider>
-    </MemoryRouter>
-	);
+    </MemoryRouter>,
+  );
 
-	test('renders correctly', () => {
-		expect(component.debug()).toMatchSnapshot();
-	});
-})
+  test('renders correctly', () => {
+    expect(component.debug()).toMatchSnapshot();
+  });
+});

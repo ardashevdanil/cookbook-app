@@ -14,49 +14,54 @@ import RecipeItem from './components/RecipeItem/RecipeItem';
 import VideoItem from './components/VideoItem/VideoItem';
 
 class App extends Component {
-
   componentDidMount() {
-    if ( this.props.location.pathname === '/' ) {
-      this.props.history.push('/cookbook-app');
+    const { dispatch, history, location } = { ...this.props };
+
+    if (location.pathname === '/') {
+      history.push('/cookbook-app');
     }
-    
-    this.props.dispatch( fetchItems('recipes') );
+    dispatch(fetchItems('recipes'));
   }
 
   render() {
+    const { history, location } = { ...this.props };
+
     return (
       <div className="App">
-        <div className="App__logo"></div>
+        <div className="App__logo" />
         <NavMenu
-          history={ this.props.history } 
-          location={ this.props.location }
+          history={history}
+          location={location}
         />
-        <Route 
-          exact path='/cookbook-app' 
-          component={ BannerContainer }
+        <Route
+          exact
+          path="/cookbook-app"
+          component={BannerContainer}
         />
         <RecipeContainer />
         <Switch>
           <Route
-            path='/cookbook-app/photos'
-            render={ (props) => <ItemsListContainer  {...props} item={ PhotoItem } /> }
+            path="/cookbook-app/photos"
+            render={props => <ItemsListContainer {...props} item={PhotoItem} />}
           />
           <Route
-            path='/cookbook-app/search'
-            render={ (props) => <ItemsListContainer {...props} item={ RecipeItem } /> }
+            path="/cookbook-app/search"
+            render={props => <ItemsListContainer {...props} item={RecipeItem} />}
           />
           <Route
-            path='/cookbook-app/videos'
-            render={ (props) => <ItemsListContainer {...props} item={ VideoItem } /> }
-          /> 
-          <Route
-            exact path='/cookbook-app'
-            render={ (props) => <ItemsListContainer {...props} item={ RecipeItem } /> }
+            path="/cookbook-app/videos"
+            render={props => <ItemsListContainer {...props} item={VideoItem} />}
           />
           <Route
-            exact path='/cookbook-app/recipes'
-            render={ (props) => <ItemsListContainer {...props} item={ RecipeItem } /> }
-          />   
+            exact
+            path="/cookbook-app"
+            render={props => <ItemsListContainer {...props} item={RecipeItem} />}
+          />
+          <Route
+            exact
+            path="/cookbook-app/recipes"
+            render={props => <ItemsListContainer {...props} item={RecipeItem} />}
+          />
         </Switch>
         <Footer />
       </div>

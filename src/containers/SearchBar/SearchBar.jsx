@@ -9,53 +9,59 @@ import searchItems from '../../actions/searchItems';
 import { selectCategory } from '../../actions/selectCategory';
 
 class SearchBar extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
       timer: '',
       value: '',
-    }
+    };
     this.handleChange = this.handleChange.bind(this);
     this.onBlur = this.onBlur.bind(this);
   }
 
+
+  onBlur() {
+    this.setState({ value: '' });
+  }
+
   handleChange(e) {
-    clearInterval(this.state.timer);
+    const { timer, value } = { ...this.state };
+    const { dispatch, history, location } = { ...this.props };
+
+    clearInterval(timer);
 
     this.setState({
-      timer: setTimeout( () => {
-        this.props.dispatch( searchItems(this.state.value) );
+      timer: setTimeout(() => {
+        dispatch(searchItems(value));
       }, 100),
       value: e.target.value,
     });
 
-    if (this.props.location.pathname !== '/cookbook-app/search') {
-      this.props.dispatch( selectCategory('search') );
-      this.props.history.push('/cookbook-app/search');
+    if (location.pathname !== '/cookbook-app/search') {
+      dispatch(selectCategory('search'));
+      history.push('/cookbook-app/search');
     }
   }
 
-  onBlur() {
-    this.setState({ value: '' })
-  }
-
   render() {
-  	return(
-  		<div className='SearchBar'>
-  			<input 
-  				className='SearchBar__input'
-          onBlur={ this.onBlur }
-          onChange={ this.handleChange }
-          type='text'
-          value={ this.state.value }
-  			/>
-        <div className='SearchBar__placeholder'>
-          <FontAwesomeIcon icon={ faSearch }/>{' '}
+    const { value } = { ...this.state };
+
+    return (
+      <div className="SearchBar">
+        <input
+          className="SearchBar__input"
+          onBlur={this.onBlur}
+          onChange={this.handleChange}
+          type="text"
+          value={value}
+        />
+        <div className="SearchBar__placeholder">
+          <FontAwesomeIcon icon={faSearch} />
+          {' '}
           FIND A RECIPE
         </div>
-  		</div>
-  	);
+      </div>
+    );
   }
 }
 
@@ -65,4 +71,4 @@ SearchBar.propTypes = {
   dispatch: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired,
-}
+};

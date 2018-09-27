@@ -12,7 +12,7 @@ Enzyme.configure({ adapter: new Adapter() });
 const initialState = {
   itemsByCategory: {
     recipes: {
-      items:[
+      items: [
         {
           comments: 0,
           cookingTime: 0,
@@ -26,21 +26,20 @@ const initialState = {
           watched: 0,
         },
       ],
-      isFetching: false
+      isFetching: false,
     },
   },
-}
+};
 
 describe('test BannerContainer component', () => {
-
-	test('should pass recipes items', () => {
+  test('should pass recipes items', () => {
     const component = mountComponentWithStore(
       BannerContainer,
       initialState,
-      { item: () => null }
+      { item: () => null },
     );
 
-		expect(component.children().at(0).props().items)
+    expect(component.children().at(0).props().items)
       .toEqual(
         [
           {
@@ -55,17 +54,16 @@ describe('test BannerContainer component', () => {
             videoId: '',
             watched: 0,
           },
-        ]
+        ],
       );
-
-	});
+  });
 
   test('should pass empty array if there isn\'t such category', () => {
     initialState.itemsByCategory = { someCategory: '' };
     const component = mountComponentWithStore(
       BannerContainer,
       initialState,
-      { item: () => null }
+      { item: () => null },
     );
 
     expect(component.children().at(0).props().items).toEqual([]);
@@ -81,7 +79,7 @@ function mountComponentWithStore(Component, state, props) {
       <Provider store={store}>
         <Component {...props} />
       </Provider>
-    </MemoryRouter>
+    </MemoryRouter>,
   );
 
   return wrapper.find(Component);

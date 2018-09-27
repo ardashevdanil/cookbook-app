@@ -2,14 +2,12 @@ import { connect } from 'react-redux';
 
 import Banner from '../../components/Banner/Banner';
 
-const mapStateToProps = (state) => {
-  return {
-    items: returnCategoryIfExists(
-      state.itemsByCategory,
-      'recipes'
-    ).splice(0, 5),
-  }
-}
+const mapStateToProps = state => ({
+  items: returnCategoryIfExists(
+    state.itemsByCategory,
+    'recipes',
+  ).splice(0, 5),
+});
 
 const BannerContainer = connect(
   mapStateToProps,
@@ -21,8 +19,8 @@ export default BannerContainer;
 
 function returnCategoryIfExists(itemsByCategory, category) {
   if (itemsByCategory[category]) {
-    return [].concat( itemsByCategory[category].items )
-  } else {
-    return []
+    return [...itemsByCategory[category].items];
   }
+
+  return [];
 }

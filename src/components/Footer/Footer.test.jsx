@@ -7,11 +7,11 @@ import Footer from './Footer';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('test Footer component', () => {
-	const component = Enzyme.shallow(
-		<Footer />
-	);
+  const component = Enzyme.shallow(
+    <Footer />,
+  );
 
-	test('renders correctly', () => {
-		expect(component.debug()).toMatchSnapshot();
-	});
-})
+  test('renders correctly', () => {
+    expect(component.debug()).toMatchSnapshot();
+  });
+});

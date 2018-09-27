@@ -7,17 +7,16 @@ import VideoItem from './VideoItem';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('test VideoItem component', () => {
-  const pushCart = jest.fn();
-	const component = Enzyme.shallow(
-		<VideoItem
+  const component = Enzyme.shallow(
+    <VideoItem
       content={{
         name: 'test',
         videoId: '',
       }}
-    />
-	);
+    />,
+  );
 
-	test('renders correctly', () => {
-		expect(component.debug()).toMatchSnapshot();
-	});
-})
+  test('renders correctly', () => {
+    expect(component.debug()).toMatchSnapshot();
+  });
+});

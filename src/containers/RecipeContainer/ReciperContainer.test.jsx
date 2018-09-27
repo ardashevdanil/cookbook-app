@@ -12,7 +12,7 @@ Enzyme.configure({ adapter: new Adapter() });
 const initialState = {
   itemsByCategory: {
     recipes: {
-      items:[
+      items: [
         {
           comments: 0,
           cookingTime: 0,
@@ -26,27 +26,27 @@ const initialState = {
           watched: 0,
         },
       ],
-      isFetching: false
+      isFetching: false,
     },
   },
-}
+};
 
 const store = configureStore()(initialState);
 
 describe('test RecipeContainer component', () => {
-	const component = Enzyme.mount(
+  const component = Enzyme.mount(
     <MemoryRouter>
-  		<Provider store={store}>
+      <Provider store={store}>
         <RecipeContainer />
       </Provider>
-    </MemoryRouter>
-	);
+    </MemoryRouter>,
+  );
 
-	test('renders correctly', () => {
-		expect(component.debug()).toMatchSnapshot();
-	});
+  test('renders correctly', () => {
+    expect(component.debug()).toMatchSnapshot();
+  });
 
   test('should return routes', () => {
     expect(component.find('div').at(0).children().length).toBe(1);
   });
-})
+});

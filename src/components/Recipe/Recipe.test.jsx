@@ -18,15 +18,15 @@ describe('test Recipe component', () => {
           directions: '',
           id: 0,
           img: '',
-          ingridients: ['', ''],
+          ingridients: ['a', 'b'],
           name: 'test1',
           watched: 0,
         }
       }
-    />
+    />,
   );
 
   test('renders correctly', () => {
     expect(component.debug()).toMatchSnapshot();
   });
-})
+});

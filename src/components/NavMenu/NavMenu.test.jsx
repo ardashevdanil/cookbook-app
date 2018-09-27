@@ -8,19 +8,19 @@ import NavMenu from './NavMenu';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('test NavMenu component', () => {
-	const component = Enzyme.shallow(
-		<NavMenu
-      history={ {} }
-      location={ {} }
-    />
-	);
+  const component = Enzyme.shallow(
+    <NavMenu
+      history={{}}
+      location={{}}
+    />,
+  );
 
-	test('renders correctly', () => {
-		expect(component.debug()).toMatchSnapshot();
-	});
+  test('renders correctly', () => {
+    expect(component.debug()).toMatchSnapshot();
+  });
 
   test('shows & hides dropdown after ckick on bars icon', () => {
-    let states = [];
+    const states = [];
 
     states.push(component.state().isDropdownShown);
     component.find(FontAwesomeIcon).at(0).simulate('click');
@@ -29,6 +29,6 @@ describe('test NavMenu component', () => {
     states.push(component.state().isDropdownShown);
 
 
-    expect(states).toEqual( [false, true, false] )
-  })
-})
+    expect(states).toEqual([false, true, false]);
+  });
+});
