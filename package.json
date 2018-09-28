@@ -1,39 +1,28 @@
 {
   "name": "cookbook-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "1.2.4",
-    "@fortawesome/free-regular-svg-icons": "5.3.1",
-    "@fortawesome/free-solid-svg-icons": "5.3.1",
-    "@fortawesome/react-fontawesome": "0.1.2",
-    "prop-types": "15.6.2",
-    "react": "16.4.2",
-    "react-dom": "16.4.2",
-    "react-redux": "5.0.7",
-    "react-router-dom": "4.3.1",
-    "react-scripts": "1.1.5",
-    "react-youtube": "7.6.0",
-    "redux": "4.0.0",
-    "redux-thunk": "2.3.0"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "client": "cd client && yarn start",
+    "dev": "concurrently --kill-others-on-fail \"PORT=3001 yarn server\" \"yarn client\"",
+    "server": "node ./bin/www",
+    "start": "node ./bin/www",
+    "test": "cd client && yarn test"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0"
   },
   "devDependencies": {
-    "enzyme": "3.5.1",
-    "enzyme-adapter-react-16": "1.4.0",
+    "concurrently": "4.0.1",
     "eslint": "5.6.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.1",
-    "eslint-plugin-react": "7.11.1",
-    "gh-pages": "1.2.0",
-    "redux-logger": "3.0.6",
-    "redux-mock-store": "1.5.3"
-  },
-  "proxy": "http://localhost:3001"
+    "eslint-plugin-react": "7.11.1"
+  }
 }
