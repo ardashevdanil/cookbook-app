@@ -5,7 +5,7 @@
   "scripts": {
     "client": "cd client && yarn start",
     "dev": "concurrently --kill-others-on-fail \"PORT=3001 yarn server\" \"yarn client\"",
-    "server": "node ./bin/www",
+    "server": "babel-node ./bin/www",
     "start": "cd client && yarn build && cd .. && node ./bin/www",
     "test": "cd client && yarn test"
   },
@@ -18,6 +18,11 @@
     "morgan": "~1.9.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
     "concurrently": "4.0.1",
     "eslint": "5.6.0",
     "eslint-config-airbnb": "17.1.0",

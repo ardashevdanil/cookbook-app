@@ -1,4 +1,4 @@
-var createError = require('http-errors');
+import createError from 'http-errors';
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
