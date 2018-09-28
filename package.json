@@ -6,7 +6,7 @@
     "client": "cd client && yarn start",
     "dev": "concurrently --kill-others-on-fail \"PORT=3001 yarn server\" \"yarn client\"",
     "server": "node ./bin/www",
-    "start": "node ./bin/www",
+    "start": "cd client && yarn build && cd .. && node ./bin/www",
     "test": "cd client && yarn test"
   },
   "dependencies": {

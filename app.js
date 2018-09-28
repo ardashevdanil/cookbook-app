@@ -4,7 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var imagesRouter = require('./routes/images');
 var itemsRouter = require('./routes/items');
@@ -21,7 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', express.static(`${__dirname}/client/build`));
 app.use('/users', usersRouter);
 app.use('/images', imagesRouter);
 app.use('/items', itemsRouter);
@@ -40,6 +39,12 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+// FIX: sends page with every path
+// express will serve up index.html if it doesn't recognize the route
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'client/build', 'index.html'));
 });
 
 module.exports = app;
