@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "client": "cd client && yarn start",
+    "build": "babel lib -d dist -D",
+    "client": "cd lib/client && yarn start",
     "dev": "concurrently --kill-others-on-fail \"PORT=3001 yarn server\" \"yarn client\"",
-    "server": "babel-node ./bin/www",
-    "start": "cd client && yarn build && cd .. && node ./bin/www",
-    "test": "cd client && yarn test"
+    "server": "babel-node ./lib/bin/www",
+    "start": "cd lib/client && yarn build && cd .. && node ./bin/www",
+    "test": "cd lib/client && yarn test"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
