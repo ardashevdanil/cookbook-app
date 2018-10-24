@@ -5,15 +5,8 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import './NavBar.css';
 
 import fetchItemsIfNeeded from '../../actions/fetchItemsIfNeeded';
+import links from '../../constants/links';
 import { selectCategory } from '../../actions/selectCategory';
-
-const links = [
-  { name: 'home', path: '/cookbook-app', tag: 'recipes' },
-  { name: 'recipes', path: '/cookbook-app/recipes', tag: 'recipes' },
-  { name: 'photo galleries', path: '/cookbook-app/photos', tag: 'photos' },
-  { name: 'videos', path: '/cookbook-app/videos', tag: 'videos' },
-  { name: 'all categories', path: '/cookbook-app', tag: 'recipes' },
-];
 
 function NavBar(props) {
   const onClick = (tag) => {
