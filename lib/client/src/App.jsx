@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import BannerContainer from './containers/BannerContainer/BannerContainer';
@@ -15,11 +15,8 @@ import VideoItem from './components/VideoItem/VideoItem';
 
 class App extends Component {
   componentDidMount() {
-    const { dispatch, history, location } = { ...this.props };
+    const { dispatch } = { ...this.props };
 
-    if (location.pathname === '/') {
-      history.push('/cookbook-app');
-    }
     dispatch(fetchItems('recipes'));
   }
 
@@ -35,31 +32,31 @@ class App extends Component {
         />
         <Route
           exact
-          path="/cookbook-app"
+          path="/"
           component={BannerContainer}
         />
         <RecipeContainer />
         <Switch>
           <Route
-            path="/cookbook-app/photos"
+            path="/photos"
             render={props => <ItemsListContainer {...props} item={PhotoItem} />}
           />
           <Route
-            path="/cookbook-app/search"
+            path="/search"
             render={props => <ItemsListContainer {...props} item={RecipeItem} />}
           />
           <Route
-            path="/cookbook-app/videos"
+            path="/videos"
             render={props => <ItemsListContainer {...props} item={VideoItem} />}
           />
           <Route
             exact
-            path="/cookbook-app"
+            path="/"
             render={props => <ItemsListContainer {...props} item={RecipeItem} />}
           />
           <Route
             exact
-            path="/cookbook-app/recipes"
+            path="/recipes"
             render={props => <ItemsListContainer {...props} item={RecipeItem} />}
           />
         </Switch>

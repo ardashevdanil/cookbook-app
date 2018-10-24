@@ -7,28 +7,28 @@ exports[`test NavBar component renders correctly 1`] = `
       <Connect(NavBar)>
         <NavBar dispatch={[Function: dispatch]}>
           <div className=\\"NavBar\\">
-            <Link to=\\"/cookbook-app\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
-              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/cookbook-app\\">
+            <Link to=\\"/\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
+              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/\\">
                 HOME
               </a>
             </Link>
-            <Link to=\\"/cookbook-app/recipes\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
-              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/cookbook-app/recipes\\">
+            <Link to=\\"/recipes\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
+              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/recipes\\">
                 RECIPES
               </a>
             </Link>
-            <Link to=\\"/cookbook-app/photos\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
-              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/cookbook-app/photos\\">
+            <Link to=\\"/photos\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
+              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/photos\\">
                 PHOTO GALLERIES
               </a>
             </Link>
-            <Link to=\\"/cookbook-app/videos\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
-              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/cookbook-app/videos\\">
+            <Link to=\\"/videos\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
+              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/videos\\">
                 VIDEOS
               </a>
             </Link>
-            <Link to=\\"/cookbook-app\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
-              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/cookbook-app\\">
+            <Link to=\\"/\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
+              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/\\">
                 ALL CATEGORIES
               </a>
             </Link>

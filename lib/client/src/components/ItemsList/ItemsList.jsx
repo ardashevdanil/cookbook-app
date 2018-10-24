@@ -9,11 +9,12 @@ class ItemsList extends React.Component {
   componentDidUpdate(prevProps) {
     const { location, onUpdate } = { ...this.props };
 
+    // FIX: I think there's a better way to handle location changes
     if (location.pathname !== prevProps.location.pathname) {
-      if (location.pathname === '/cookbook-app') {
+      if (location.pathname === '/') {
         onUpdate('recipes');
       } else {
-        onUpdate(location.pathname.slice(14));
+        onUpdate(location.pathname.slice(1));
       }
     }
   }

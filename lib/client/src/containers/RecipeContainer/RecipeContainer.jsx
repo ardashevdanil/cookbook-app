@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { withRouter, BrowserRouter as Router, Route } from 'react-router-dom';
+import { withRouter, Route } from 'react-router-dom';
 
 import Recipe from '../../components/Recipe/Recipe';
 

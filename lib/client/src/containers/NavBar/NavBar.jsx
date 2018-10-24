@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './NavBar.css';
 
 import fetchItemsIfNeeded from '../../actions/fetchItemsIfNeeded';
