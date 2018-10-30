@@ -6,7 +6,6 @@ import './SearchBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import searchItems from '../../actions/searchItems';
-import { selectCategory } from '../../actions/selectCategory';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -18,7 +17,6 @@ class SearchBar extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.onBlur = this.onBlur.bind(this);
   }
-
 
   onBlur() {
     this.setState({ value: '' });
@@ -37,9 +35,8 @@ class SearchBar extends React.Component {
       value: e.target.value,
     });
 
-    if (location.pathname !== '/cookbook-app/search') {
-      dispatch(selectCategory('search'));
-      history.push('/cookbook-app/search');
+    if (location.pathname !== '/search') {
+      history.push('/search');
     }
   }
 

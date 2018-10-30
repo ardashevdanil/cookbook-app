@@ -6,7 +6,7 @@ import { faClock } from '@fortawesome/free-regular-svg-icons';
 import { faUtensils } from '@fortawesome/free-solid-svg-icons';
 
 function Recipe({ content }) {
-  const ingridients = content.ingridients.map((item, index) => (
+  const ingridients = content.ingridients.split('\\').map((item, index) => (
     <p key={index}>
       {item}
     </p>
@@ -53,9 +53,7 @@ Recipe.propTypes = {
     directions: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     img: PropTypes.string.isRequired,
-    ingridients: PropTypes.arrayOf(
-      PropTypes.string.isRequired,
-    ).isRequired,
+    ingridients: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
   }).isRequired,
 };
