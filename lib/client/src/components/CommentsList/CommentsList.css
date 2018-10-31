@@ -1,0 +1,27 @@
+.CommentsList {
+  box-sizing: border-box;
+  margin: 45px 0;
+  padding: 20px 40px 30px 40px;
+  background-color: white;
+  box-shadow: 0 0 13px 0 rgba(11, 12, 12, 0.15);
+}
+
+.CommentsList__heading {
+  font-size: 24px;
+  padding-bottom: 9px;
+  border-bottom: 2px solid #ddd;
+}
+
+@media only screen and (max-width: 1120px) {
+  .CommentsList {
+    margin: 0;
+    padding: 11.1vw 6.9vw;
+    box-shadow: none;
+  }
+
+  .CommentsList__heading {
+    font-size: 7vw;
+    padding-bottom: 2.8vw;
+    border-width: 0.7vw;
+  }
+}

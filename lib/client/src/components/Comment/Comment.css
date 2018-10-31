@@ -1,0 +1,93 @@
+.Comment {
+  border-bottom: 2px solid #ddd;
+  padding: 20px 10px 0;
+}
+
+.Comment__user-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Comment__avatar {
+  height: 57px;
+  width: 57px;
+  border-radius: 100%;
+  margin-right: 20px;
+  background-color: pink;
+}
+
+.Comment__info {
+  width: calc(100% - 57px - 20px - 50px);
+  font-size: 15px;
+}
+
+.Comment__user-name {
+  margin-top: 2px;
+  font-weight: bold;
+}
+
+.Comment__date {
+  margin-top: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #629494;
+}
+
+.Comment__likes {
+  height: 0px;
+  width: 50px;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: end;
+}
+
+.Comment__likes>svg {
+  font-size: 11px;
+}
+
+.Comment__likes:hover {
+  color: #629494;
+  cursor: pointer;
+}
+.Comment__text {
+  margin: 10px 77px;
+  font-size: 14.8px;
+}
+
+@media only screen and (max-width: 1120px) {
+  .Comment{
+    padding: 7vw 3vw;
+    border-width: 0.7vw;
+  }
+
+  .Comment__avatar {
+    height: 18vw;
+    width: 18vw;
+    margin-right: 5vw;
+  }
+
+  .Comment__info {
+    width: calc(100% - 18vw - 8vw - 5vw);
+    font-size: 4.2vw;
+  }
+
+  .Comment__date {
+    font-size: 4vw;
+  }
+
+  .Comment__likes {
+    width: 8vw;
+    margin-top: 6vw;
+    font-size: 4vw;
+  }
+
+  .Comment__likes>svg {
+    font-size: 3.4vw;
+  }
+  
+  .Comment__text {
+    margin: 3vw 24vw;
+    font-size: 4.6vw;
+  }
+}

@@ -1,0 +1,74 @@
+.CommentInput {
+  box-sizing: border-box;
+  margin: 45px 0;
+  padding: 20px 40px 30px 40px;
+  background-color: white;
+  box-shadow: 0 0 13px 0 rgba(11, 12, 12, 0.15);
+}
+
+.CommentInput__heading {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.CommentInput__input {
+  padding: 26px;
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+
+.CommentInput__input>input {
+  width: calc(100% - 85px - 7px);
+  height: 38px;
+  border: solid 1px #c2c2c2;
+  background-color: white;
+}
+  
+.CommentInput__button {
+  width: 85px;
+  height: 38px;
+  margin-left: 7px;
+  border: 1px solid #383737;
+  background-color: #383737;
+  color: white;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CommentInput__button:hover {
+  cursor: pointer;
+  color: #383737;
+  background-color: white;
+}
+
+@media only screen and (max-width: 1120px) {
+  .CommentInput {
+    margin: 0;
+    padding: 7vw 6.9vw;
+    background-color: #f6f6f6;
+    box-shadow: none;
+  }
+
+  .CommentInput__heading {
+    font-size: 7vw;
+  }
+
+  .CommentInput__input {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .CommentInput__input>input {
+    width: 100%;
+  }
+
+  .CommentInput__button {
+    width: 100%;
+    margin: 0;
+    font-size: 5.5vw;
+    margin-top: 1vw;
+  }
+}

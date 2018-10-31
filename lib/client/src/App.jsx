@@ -12,6 +12,8 @@ import PhotoItem from './components/PhotoItem/PhotoItem';
 import RecipeContainer from './containers/RecipeContainer/RecipeContainer';
 import RecipeItem from './components/RecipeItem/RecipeItem';
 import VideoItem from './components/VideoItem/VideoItem';
+import CommentInput from './components/CommentInput/CommentInput';
+import CommentsList from './components/CommentsList/CommentsList';
 
 class App extends Component {
   componentDidMount() {
@@ -61,6 +63,8 @@ class App extends Component {
           />
         </Switch>
         <Footer />
+        <CommentInput />
+        <CommentsList />
       </div>
     );
   }
