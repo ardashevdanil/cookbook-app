@@ -18,7 +18,7 @@ describe('test Recipe component', () => {
           directions: '',
           id: 0,
           img: '',
-          ingridients: ['a', 'b'],
+          ingridients: 'a\\b',
           name: 'test1',
           watched: 0,
         }

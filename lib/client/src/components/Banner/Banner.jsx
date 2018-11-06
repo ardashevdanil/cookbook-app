@@ -18,7 +18,6 @@ class Banner extends React.Component {
     clearInterval(this.timer);
   }
 
-
   changeBanner() {
     this.setState((prevState) => {
       let nextBanner;
@@ -58,6 +57,7 @@ class Banner extends React.Component {
           className={className}
           key={item}
           onClick={() => this.handleChangeBanner(item)}
+          role="button"
         />
       );
     });
@@ -80,7 +80,7 @@ class Banner extends React.Component {
           </div>
           <Link
             className="Banner__button"
-            to={`/cookbook-app/recipe/${items[+selectedBanner].id}`}
+            to={`/recipe/${items[+selectedBanner].id}`}
           >
             GET IT RECIPE
           </Link>

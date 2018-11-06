@@ -8,7 +8,7 @@ exports[`test Banner component renders correctly 1`] = `
       test1
     </div>
     <div className=\\"Banner__description\\" />
-    <Link className=\\"Banner__button\\" to=\\"/cookbook-app/recipe/0\\" replace={false}>
+    <Link className=\\"Banner__button\\" to=\\"/recipe/0\\" replace={false}>
       GET IT RECIPE
     </Link>
   </div>

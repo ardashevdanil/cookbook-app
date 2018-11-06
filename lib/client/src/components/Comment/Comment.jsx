@@ -1,32 +1,45 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp } from '@fortawesome/free-regular-svg-icons';
 import './Comment.css';
 
-function Comment() {
+function Comment({ avatar, date, likes, userName, text }) {
   return (
     <div className="Comment">
       <div className="Comment__user-info">
-        <div className="Comment__avatar" />
+        <img
+          alt="User avatar"
+          className="Comment__avatar"
+          src={avatar}
+        />
         <div className="Comment__info">
           post by
           <div className="Comment__user-name">
-            Smuckersreg Toppings
+            {userName}
           </div>
           <div className="Comment__date">
-            6/10/2014
+            {date}
           </div>
         </div>
         <div className="Comment__likes">
-          15
+          {likes}
           <FontAwesomeIcon icon={faThumbsUp} />
         </div>
       </div>
       <div className="Comment__text">
-        Thanks for the ricipe
+        {text}
       </div>
     </div>
   );
 }
 
 export default Comment;
+
+Comment.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  likes: PropTypes.number.isRequired,
+  text: PropTypes.string.isRequired,
+  userName: PropTypes.string.isRequired,
+};

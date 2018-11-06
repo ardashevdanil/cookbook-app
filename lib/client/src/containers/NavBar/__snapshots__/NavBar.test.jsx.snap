@@ -27,9 +27,9 @@ exports[`test NavBar component renders correctly 1`] = `
                 VIDEOS
               </a>
             </Link>
-            <Link to=\\"/\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
-              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/\\">
-                ALL CATEGORIES
+            <Link to=\\"/userlogin\\" className=\\"NavBar__link\\" onClick={[Function: onClick]} replace={false}>
+              <a className=\\"NavBar__link\\" onClick={[Function]} href=\\"/userlogin\\">
+                LOGIN
               </a>
             </Link>
           </div>

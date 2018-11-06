@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import './NavMenu.css';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 import NavBar from '../../containers/NavBar/NavBar';
 import SearchBar from '../../containers/SearchBar/SearchBar';
 

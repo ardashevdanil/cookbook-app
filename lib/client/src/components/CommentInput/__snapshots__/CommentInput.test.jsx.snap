@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test CommentInput component renders correctly 1`] = `
+"<div className=\\"CommentInput\\">
+  <div className=\\"CommentInput__heading\\">
+    Post a Comment
+  </div>
+  <div className=\\"CommentInput__input\\">
+    <input onChange={[Function: bound handleChange]} type=\\"text\\" value=\\"\\" />
+    <div className=\\"CommentInput__button\\" onClick={[Function: bound postComment]} role=\\"button\\">
+      POST
+    </div>
+  </div>
+</div>"
+`;

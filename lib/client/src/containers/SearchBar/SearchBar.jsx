@@ -1,17 +1,18 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import React from 'react';
-import './SearchBar.css';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import './SearchBar.css';
+
 import searchItems from '../../actions/searchItems';
+import { selectCategory } from '../../actions/selectCategory';
 
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      timer: '',
       value: '',
     };
     this.handleChange = this.handleChange.bind(this);
@@ -23,17 +24,14 @@ class SearchBar extends React.Component {
   }
 
   handleChange(e) {
-    const { timer, value } = { ...this.state };
     const { dispatch, history, location } = { ...this.props };
 
-    clearInterval(timer);
-
     this.setState({
-      timer: setTimeout(() => {
-        dispatch(searchItems(value));
-      }, 100),
       value: e.target.value,
     });
+    if (e.target.value === '') return;
+    dispatch(searchItems(e.target.value));
+    dispatch(selectCategory('search'));
 
     if (location.pathname !== '/search') {
       history.push('/search');
@@ -48,7 +46,7 @@ class SearchBar extends React.Component {
         <input
           className="SearchBar__input"
           onBlur={this.onBlur}
-          onChange={this.handleChange}
+          onChange={_.throttle(this.handleChange, 100)}
           type="text"
           value={value}
         />

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import './RecipeItem.css';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faClock,
@@ -9,7 +8,7 @@ import {
 
 function RecipeItem({ content, history }) {
   const handleClick = () => {
-    history.push(`/cookbook-app/recipe/${content.id}`);
+    history.push(`/recipe/${content.id}`);
     window.scrollTo(0, 0);
   };
 

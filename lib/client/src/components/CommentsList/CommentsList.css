@@ -10,6 +10,7 @@
   font-size: 24px;
   padding-bottom: 9px;
   border-bottom: 2px solid #ddd;
+  font-style: italic;
 }
 
 @media only screen and (max-width: 1120px) {

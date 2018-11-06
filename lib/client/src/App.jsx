@@ -11,9 +11,8 @@ import NavMenu from './components/NavMenu/NavMenu';
 import PhotoItem from './components/PhotoItem/PhotoItem';
 import RecipeContainer from './containers/RecipeContainer/RecipeContainer';
 import RecipeItem from './components/RecipeItem/RecipeItem';
+import UserLoginContainer from './containers/UserLoginContainer/UserLoginContainer';
 import VideoItem from './components/VideoItem/VideoItem';
-import CommentInput from './components/CommentInput/CommentInput';
-import CommentsList from './components/CommentsList/CommentsList';
 
 class App extends Component {
   componentDidMount() {
@@ -62,9 +61,11 @@ class App extends Component {
             render={props => <ItemsListContainer {...props} item={RecipeItem} />}
           />
         </Switch>
+        <Route
+          path="/userlogin"
+          component={UserLoginContainer}
+        />
         <Footer />
-        <CommentInput />
-        <CommentsList />
       </div>
     );
   }
