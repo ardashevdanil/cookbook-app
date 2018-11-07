@@ -3,16 +3,23 @@
 exports[`test Comment component renders correctly 1`] = `
 "<div className=\\"Comment\\">
   <div className=\\"Comment__user-info\\">
-    <div className=\\"Comment__avatar\\" />
+    <img alt=\\"User avatar\\" className=\\"Comment__avatar\\" src=\\"test\\" />
     <div className=\\"Comment__info\\">
       post by
-      <div className=\\"Comment__user-name\\" />
-      <div className=\\"Comment__date\\" />
+      <div className=\\"Comment__user-name\\">
+        test
+      </div>
+      <div className=\\"Comment__date\\">
+        test
+      </div>
     </div>
     <div className=\\"Comment__likes\\">
+      42
       <FontAwesomeIcon icon={{...}} border={false} className=\\"\\" mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} transform={{...}} />
     </div>
   </div>
-  <div className=\\"Comment__text\\" />
+  <div className=\\"Comment__text\\">
+    test
+  </div>
 </div>"
 `;

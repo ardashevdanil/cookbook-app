@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test CommentsList component renders correctly 1`] = `
+"<div>
+  <div className=\\"CommentsList\\">
+    <div className=\\"CommentsList__heading\\">
+      Comments
+    </div>
+    <div className=\\"CommentsList__list\\">
+      <Comment avatar={[undefined]} date={[undefined]} likes={[undefined]} text={[undefined]} userName={[undefined]} />
+    </div>
+  </div>
+  <CommentInput fetchComments={[Function: fetchComments]} recipe={1} user=\\"test\\" />
+</div>"
+`;

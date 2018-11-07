@@ -8,7 +8,13 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('test Comment component', () => {
   const component = Enzyme.shallow(
-    <Comment />,
+    <Comment
+      avatar="test"
+      date="test"
+      likes={42}
+      userName="test"
+      text="test"
+    />,
   );
 
   test('renders correctly', () => {

@@ -1,5 +1,8 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import './UserLogin.css';
+
+import UserLogout from '../UserLogout/UserLogout';
 
 class UserLogin extends React.Component {
   constructor() {
@@ -32,6 +35,10 @@ class UserLogin extends React.Component {
       name: login,
       password: loginPassword,
     });
+    this.setState({
+      login: '',
+      loginPassword: '',
+    });
   }
 
   handleSignIn() {
@@ -44,6 +51,10 @@ class UserLogin extends React.Component {
       name: username,
       password: signInPassword,
     });
+    this.setState({
+      name: '',
+      password: '',
+    });
   }
 
   render() {
@@ -53,6 +64,20 @@ class UserLogin extends React.Component {
       signInPassword,
       username,
     } = { ...this.state };
+    const {
+      authorisationError,
+      onLogout,
+      user,
+    } = { ...this.props };
+
+    if (user !== 'Guest') {
+      return (
+        <UserLogout
+          onLogout={onLogout}
+          user={user}
+        />
+      );
+    }
 
     return (
       <div className="UserLogin">
@@ -75,6 +100,11 @@ class UserLogin extends React.Component {
             type="text"
             value={'*'.repeat(loginPassword.length)}
           />
+          <div
+            className={authorisationError ? 'UserLogin__error' : 'UserLogin__error_hidden'}
+          >
+            Unable to login. Check login or password.
+          </div>
           <div
             className="UserLogin__button"
             onClick={this.handleLogin}
@@ -120,3 +150,11 @@ class UserLogin extends React.Component {
 }
 
 export default UserLogin;
+
+UserLogin.propTypes = {
+  authorisationError: PropTypes.bool.isRequired,
+  onLogin: PropTypes.func.isRequired,
+  onLogout: PropTypes.func.isRequired,
+  onSignIn: PropTypes.func.isRequired,
+  user: PropTypes.string.isRequired,
+};

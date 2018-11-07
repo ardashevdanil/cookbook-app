@@ -1,4 +1,5 @@
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import React from 'react';
 import './CommentInput.css';
 
@@ -20,15 +21,18 @@ class CommentInput extends React.Component {
 
   postComment() {
     const { value } = { ...this.state };
-    const { recipe, user } = { ...this.props };
+    const { fetchComments, recipe, user } = { ...this.props };
 
     if (!value) return;
 
+    // FIX: make a pushComment action
     axios.post('/comments', {
       recipeId: recipe,
       text: value,
       userName: user,
-    });
+    })
+      .then(() => fetchComments());
+
     this.setState({ value: '' });
   }
 
@@ -60,3 +64,9 @@ class CommentInput extends React.Component {
 }
 
 export default CommentInput;
+
+CommentInput.propTypes = {
+  fetchComments: PropTypes.func.isRequired,
+  recipe: PropTypes.number.isRequired,
+  user: PropTypes.string.isRequired,
+}

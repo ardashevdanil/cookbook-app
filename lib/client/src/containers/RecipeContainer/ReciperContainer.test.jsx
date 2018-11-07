@@ -10,6 +10,20 @@ import RecipeContainer from './RecipeContainer';
 Enzyme.configure({ adapter: new Adapter() });
 
 const initialState = {
+  commentsByRecipe: {
+    1: {
+      comments: [
+        {
+          date: 'test',
+          likes: 1,
+          text: 'test',
+          userName: 'test',
+          avatar: 'test',
+          id: 1,
+        },
+      ],
+    },
+  },
   itemsByCategory: {
     recipes: {
       items: [

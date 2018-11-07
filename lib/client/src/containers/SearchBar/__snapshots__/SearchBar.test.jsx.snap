@@ -5,7 +5,7 @@ exports[`test SearchBar component renders correctly 1`] = `
   <Connect(SearchBar) dispatch={[Function: dispatch]} history={{...}} location={{...}}>
     <SearchBar dispatch={[Function: dispatch]} history={{...}} location={{...}}>
       <div className=\\"SearchBar\\">
-        <input className=\\"SearchBar__input\\" onBlur={[Function: bound onBlur]} onChange={[Function: bound handleChange]} type=\\"text\\" value=\\"\\" />
+        <input className=\\"SearchBar__input\\" onBlur={[Function: bound onBlur]} onChange={[Function: debounced]} type=\\"text\\" value=\\"\\" />
         <div className=\\"SearchBar__placeholder\\">
           <FontAwesomeIcon icon={{...}} border={false} className=\\"\\" mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} transform={{...}}>
             <svg aria-hidden=\\"true\\" data-prefix=\\"fas\\" data-icon=\\"search\\" className=\\"svg-inline--fa fa-search fa-w-16 \\" role=\\"img\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 512 512\\" style={{...}}>

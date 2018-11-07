@@ -8,7 +8,12 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('test CommentsList component', () => {
   const component = Enzyme.shallow(
-    <CommentsList />,
+    <CommentsList
+      comments={[{}]}
+      fetchComments={() => null}
+      recipe={1}
+      user="test"
+    />,
   );
 
   test('renders correctly', () => {

@@ -1,15 +1,22 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Comment from '../Comment/Comment';
 import './CommentsList.css';
+
+import Comment from '../Comment/Comment';
+import CommentInput from '../CommentInput/CommentInput';
 
 class CommentsList extends React.Component {
   componentDidMount() {
-    this.props.onMount();
+    this.props.fetchComments();
   }
 
   render() {
-    const { comments } = { ...this.props };
+    const {
+      comments,
+      fetchComments,
+      recipe,
+      user,
+    } = { ...this.props };
     const commentsComponents = comments.map(comment => (
       <Comment
         avatar={comment.avatar}
@@ -21,14 +28,31 @@ class CommentsList extends React.Component {
       />
     ));
 
+    if (!comments.length) {
+      return (
+        <CommentInput
+          fetchComments={fetchComments}
+          recipe={recipe}
+          user={user}
+        />
+      );
+    }
+
     return (
-      <div className="CommentsList">
-        <div className="CommentsList__heading">
-          Comments
+      <div>
+        <div className="CommentsList">
+          <div className="CommentsList__heading">
+            Comments
+          </div>
+          <div className="CommentsList__list">
+            {commentsComponents}
+          </div>
         </div>
-        <div className="CommentsList__list">
-          {commentsComponents}
-        </div>
+        <CommentInput
+          fetchComments={fetchComments}
+          recipe={recipe}
+          user={user}
+        />
       </div>
     );
   }
@@ -42,4 +66,7 @@ CommentsList.defaultProps = {
 
 CommentsList.propTypes = {
   comments: PropTypes.arrayOf(PropTypes.object),
+  fetchComments: PropTypes.func.isRequired,
+  recipe: PropTypes.number.isRequired,
+  user: PropTypes.string.isRequired,
 };

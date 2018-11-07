@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test UserLoginContainer component renders correctly 1`] = `
+"<MemoryRouter>
+  <Router history={{...}}>
+    <Provider store={{...}}>
+      <Connect(UserLogin)>
+        <UserLogin authorisationError={false} user=\\"Guest\\" onLogin={[Function: onLogin]} onLogout={[Function: onLogout]} onSignIn={[Function: onSignIn]}>
+          <div className=\\"UserLogin\\">
+            <div className=\\"UserLogin__form\\">
+              <div className=\\"UserLogin__heading\\">
+                Login
+              </div>
+              Login for LEMON
+              <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"login\\" type=\\"text\\" value=\\"\\" />
+              <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"password\\" type=\\"text\\" value=\\"\\" />
+              <div className=\\"UserLogin__error_hidden\\">
+                Unable to login. Check login or password.
+              </div>
+              <div className=\\"UserLogin__button\\" onClick={[Function: bound handleLogin]}>
+                LOGIN
+              </div>
+              <div className=\\"UserLogin__hint\\">
+                Dont have an account? Sign in
+              </div>
+            </div>
+            <div className=\\"UserLogin__form\\">
+              <div className=\\"UserLogin__heading\\">
+                Sign in
+              </div>
+              Sign in for LEMON
+              <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"username\\" type=\\"text\\" value=\\"\\" />
+              <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"password\\" type=\\"text\\" value=\\"\\" />
+              <div className=\\"UserLogin__button\\" onClick={[Function: bound handleSignIn]}>
+                SIGN UP
+              </div>
+              <div className=\\"UserLogin__hint\\">
+                By joing LEMON you agree to our terms of service
+              </div>
+            </div>
+          </div>
+        </UserLogin>
+      </Connect(UserLogin)>
+    </Provider>
+  </Router>
+</MemoryRouter>"
+`;

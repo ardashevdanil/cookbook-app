@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { withRouter, Route } from 'react-router-dom';
 
-import CommentInput from '../../components/CommentInput/CommentInput';
 import CommentsList from '../../components/CommentsList/CommentsList';
 import fetchComments from '../../actions/fetchComments';
 import Recipe from '../../components/Recipe/Recipe';
@@ -19,10 +18,9 @@ function RecipeContainer({ comments, dispatch, items, user }) {
           <CommentsList
             {...props}
             comments={comments[item.id] ? comments[item.id].comments : []}
-            onMount={() => dispatch(fetchComments(item.id))}
-          />
-          <CommentInput
-            {...props}
+
+            // FIX: should use COMET for fetching comments
+            fetchComments={() => dispatch(fetchComments(item.id))}
             recipe={item.id}
             user={user}
           />

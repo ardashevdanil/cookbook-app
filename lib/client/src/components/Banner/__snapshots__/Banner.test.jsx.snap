@@ -13,11 +13,11 @@ exports[`test Banner component renders correctly 1`] = `
     </Link>
   </div>
   <div className=\\"Banner__change-menu\\">
-    <div className=\\"Banner__nav-button_active Banner__nav-button\\" onClick={[Function: onClick]} />
-    <div className=\\"Banner__nav-button\\" onClick={[Function: onClick]} />
-    <div className=\\"Banner__nav-button\\" onClick={[Function: onClick]} />
-    <div className=\\"Banner__nav-button\\" onClick={[Function: onClick]} />
-    <div className=\\"Banner__nav-button\\" onClick={[Function: onClick]} />
+    <div className=\\"Banner__nav-button_active Banner__nav-button\\" onClick={[Function: onClick]} role=\\"button\\" />
+    <div className=\\"Banner__nav-button\\" onClick={[Function: onClick]} role=\\"button\\" />
+    <div className=\\"Banner__nav-button\\" onClick={[Function: onClick]} role=\\"button\\" />
+    <div className=\\"Banner__nav-button\\" onClick={[Function: onClick]} role=\\"button\\" />
+    <div className=\\"Banner__nav-button\\" onClick={[Function: onClick]} role=\\"button\\" />
   </div>
 </div>"
 `;

@@ -1,0 +1,45 @@
+.UserLogout {
+  width: 100%;
+  margin: 81px 0;
+  box-sizing: border-box;
+  padding: 16px 25px;
+  background-color: white;
+  box-shadow: 0 0 13px 0 rgba(11, 12, 12, 0.15);
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+.UserLogout__button {
+  width: 100px;
+  height: 27px;
+  border: solid 1px #c2c2c2;
+  margin: 35px calc(50% - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px; 
+  font-style: normal;
+}
+
+.UserLogout__button:hover {
+  border-color: #911026;
+  color: #911026;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1120px) {
+  .UserLogout {
+    width: 100%;
+    padding: 5vw 7.8vw;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .UserLogout__button {
+    width: 31vw;
+    height: 8.4vw;
+    margin: 11vw calc(50% - 15.5vw);
+    font-size: 3.8vw;
+  }
+}
