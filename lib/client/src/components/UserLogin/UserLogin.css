@@ -8,6 +8,7 @@
   width: 324px;
   box-sizing: border-box;
   padding: 16px 25px;
+  align-self: flex-start;
   background-color: white;
   box-shadow: 0 0 13px 0 rgba(11, 12, 12, 0.15);
 }
@@ -71,6 +72,28 @@
 .UserLogin__error_hidden {
   display: none;
 }
+
+.UserLogin__dropzone {
+  height: 150px;
+  margin-top: 20px;
+  border: dashed 3px #9a9a9a;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-style: italic;
+  color: #9a9a9a;
+}
+
+.UserLogin__dropzone_accept {
+  border-color: lightgreen;
+}
+
+.UserLogin__dropzone_reject {
+  border-color: red;
+}
+
 @media only screen and (max-width: 1120px) {
   .UserLogin {
     margin: 0;

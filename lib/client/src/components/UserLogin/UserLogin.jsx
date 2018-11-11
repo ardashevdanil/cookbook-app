@@ -1,5 +1,8 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Dropzone from 'react-dropzone';
 import './UserLogin.css';
 
 import UserLogout from '../UserLogout/UserLogout';
@@ -8,6 +11,7 @@ class UserLogin extends React.Component {
   constructor() {
     super();
     this.state = {
+      imgFile: null,
       login: '',
       loginPassword: '',
       signInPassword: '',
@@ -16,6 +20,7 @@ class UserLogin extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
     this.handleSignIn = this.handleSignIn.bind(this);
+    this.onDrop = this.onDrop.bind(this);
   }
 
   handleInputChange(field, e) {
@@ -42,23 +47,32 @@ class UserLogin extends React.Component {
   }
 
   handleSignIn() {
-    const { signInPassword, username } = { ...this.state };
+    const { imgFile, signInPassword, username } = { ...this.state };
     const { onSignIn } = { ...this.props };
 
-    if (username === '' || signInPassword === '') return;
+    if (username === '' || signInPassword === '' || !imgFile) return;
 
     onSignIn({
+      img: imgFile,
       name: username,
       password: signInPassword,
     });
     this.setState({
-      name: '',
-      password: '',
+      imgFile: null,
+      signInPassword: '',
+      username: '',
+    });
+  }
+
+  onDrop(files) {
+    this.setState({
+      imgFile: files[0],
     });
   }
 
   render() {
     const {
+      imgFile,
       login,
       loginPassword,
       signInPassword,
@@ -67,6 +81,7 @@ class UserLogin extends React.Component {
     const {
       authorisationError,
       onLogout,
+      signInError,
       user,
     } = { ...this.props };
 
@@ -97,8 +112,8 @@ class UserLogin extends React.Component {
             className="UserLogin__input"
             onChange={e => this.handleInputChange('loginPassword', e)}
             placeholder="password"
-            type="text"
-            value={'*'.repeat(loginPassword.length)}
+            type="password"
+            value={loginPassword}
           />
           <div
             className={authorisationError ? 'UserLogin__error' : 'UserLogin__error_hidden'}
@@ -131,9 +146,24 @@ class UserLogin extends React.Component {
             className="UserLogin__input"
             onChange={e => this.handleInputChange('signInPassword', e)}
             placeholder="password"
-            type="text"
-            value={'*'.repeat(signInPassword.length)}
+            type="password"
+            value={signInPassword}
           />
+          <Dropzone
+            accept="image/jpeg, image/png"
+            acceptClassName="UserLogin__dropzone_accept"
+            className="UserLogin__dropzone"
+            maxSize={2 * 1024 * 1024}
+            onDrop={this.onDrop}
+            rejectClassName="UserLogin__dropzone_reject"
+          >
+            {!imgFile ? 'Upload a profile image' : <FontAwesomeIcon icon={faCheckCircle} size="5x" />}
+          </Dropzone>
+          <div
+            className={signInError ? 'UserLogin__error' : 'UserLogin__error_hidden'}
+          >
+            Username is already taken.
+          </div>
           <div
             className="UserLogin__button"
             onClick={this.handleSignIn}
@@ -156,5 +186,6 @@ UserLogin.propTypes = {
   onLogin: PropTypes.func.isRequired,
   onLogout: PropTypes.func.isRequired,
   onSignIn: PropTypes.func.isRequired,
+  signInError: PropTypes.bool.isRequired,
   user: PropTypes.string.isRequired,
 };

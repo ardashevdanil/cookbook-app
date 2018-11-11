@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp } from '@fortawesome/free-regular-svg-icons';
 import './Comment.css';
 
 function Comment({ avatar, date, likes, userName, text }) {
@@ -22,10 +20,7 @@ function Comment({ avatar, date, likes, userName, text }) {
             {date}
           </div>
         </div>
-        <div className="Comment__likes">
-          {likes}
-          <FontAwesomeIcon icon={faThumbsUp} />
-        </div>
+        <div className="Comment__likes" />
       </div>
       <div className="Comment__text">
         {text}

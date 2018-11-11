@@ -13,10 +13,7 @@ exports[`test Comment component renders correctly 1`] = `
         test
       </div>
     </div>
-    <div className=\\"Comment__likes\\">
-      42
-      <FontAwesomeIcon icon={{...}} border={false} className=\\"\\" mask={{...}} fixedWidth={false} inverse={false} flip={{...}} listItem={false} pull={{...}} pulse={false} rotation={{...}} size={{...}} spin={false} symbol={false} transform={{...}} />
-    </div>
+    <div className=\\"Comment__likes\\" />
   </div>
   <div className=\\"Comment__text\\">
     test

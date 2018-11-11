@@ -5,7 +5,7 @@ exports[`test UserLoginContainer component renders correctly 1`] = `
   <Router history={{...}}>
     <Provider store={{...}}>
       <Connect(UserLogin)>
-        <UserLogin authorisationError={false} user=\\"Guest\\" onLogin={[Function: onLogin]} onLogout={[Function: onLogout]} onSignIn={[Function: onSignIn]}>
+        <UserLogin authorisationError={false} signInError={false} user=\\"Guest\\" onLogin={[Function: onLogin]} onLogout={[Function: onLogout]} onSignIn={[Function: onSignIn]}>
           <div className=\\"UserLogin\\">
             <div className=\\"UserLogin__form\\">
               <div className=\\"UserLogin__heading\\">
@@ -13,7 +13,7 @@ exports[`test UserLoginContainer component renders correctly 1`] = `
               </div>
               Login for LEMON
               <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"login\\" type=\\"text\\" value=\\"\\" />
-              <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"password\\" type=\\"text\\" value=\\"\\" />
+              <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"password\\" type=\\"password\\" value=\\"\\" />
               <div className=\\"UserLogin__error_hidden\\">
                 Unable to login. Check login or password.
               </div>
@@ -30,7 +30,16 @@ exports[`test UserLoginContainer component renders correctly 1`] = `
               </div>
               Sign in for LEMON
               <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"username\\" type=\\"text\\" value=\\"\\" />
-              <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"password\\" type=\\"text\\" value=\\"\\" />
+              <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"password\\" type=\\"password\\" value=\\"\\" />
+              <n accept=\\"image/jpeg, image/png\\" acceptClassName=\\"UserLogin__dropzone_accept\\" className=\\"UserLogin__dropzone\\" maxSize={2097152} onDrop={[Function: bound onDrop]} rejectClassName=\\"UserLogin__dropzone_reject\\" preventDropOnDocument={true} disabled={false} disableClick={false} inputProps={{...}} multiple={true} minSize={0} getDataTransferItems={[Function: getDataTransferItems]}>
+                <div className=\\"UserLogin__dropzone\\" style={{...}} onDrop={[Function: bound value]} onClick={[Function: bound value]} onDragStart={[Function: bound value]} onDragEnter={[Function: bound value]} onDragOver={[Function: bound value]} onDragLeave={[Function: bound value]} aria-disabled={false}>
+                  Upload a profile image
+                  <input accept=\\"image/jpeg, image/png\\" disabled={false} type=\\"file\\" style={{...}} multiple={true} onChange={[Function: bound value]} autoComplete=\\"off\\" />
+                </div>
+              </n>
+              <div className=\\"UserLogin__error_hidden\\">
+                Username is already taken.
+              </div>
               <div className=\\"UserLogin__button\\" onClick={[Function: bound handleSignIn]}>
                 SIGN UP
               </div>

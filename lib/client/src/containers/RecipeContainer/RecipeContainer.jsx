@@ -19,7 +19,7 @@ function RecipeContainer({ comments, dispatch, items, user }) {
             {...props}
             comments={comments[item.id] ? comments[item.id].comments : []}
 
-            // FIX: should use COMET for fetching comments
+            // FIX: should use socket.io for fetching comments
             fetchComments={() => dispatch(fetchComments(item.id))}
             recipe={item.id}
             user={user}

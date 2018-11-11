@@ -16,6 +16,7 @@ describe('test UserLogin component', () => {
       onLogin={onLogin}
       onLogout={onLogout}
       onSignIn={onSignIn}
+      signInError={false}
       user={'Guest'}
     />,
   );
@@ -51,12 +52,14 @@ describe('test UserLogin component', () => {
 
   test('calls onSignIn after click on signin button after inserting name and password in state', () => {
     component.setState({
+      imgFile: 'test',
       username: 'test',
       signInPassword: 'test',
     });
     component.find('.UserLogin__button').at(1).simulate('click');
 
     expect(onSignIn.mock.calls[0][0]).toEqual({
+      img: 'test',
       name: 'test',
       password: 'test',
     });

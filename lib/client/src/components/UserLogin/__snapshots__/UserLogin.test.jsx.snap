@@ -8,7 +8,7 @@ exports[`test UserLogin component renders correctly 1`] = `
     </div>
     Login for LEMON
     <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"login\\" type=\\"text\\" value=\\"\\" />
-    <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"password\\" type=\\"text\\" value=\\"\\" />
+    <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"password\\" type=\\"password\\" value=\\"\\" />
     <div className=\\"UserLogin__error_hidden\\">
       Unable to login. Check login or password.
     </div>
@@ -25,7 +25,13 @@ exports[`test UserLogin component renders correctly 1`] = `
     </div>
     Sign in for LEMON
     <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"username\\" type=\\"text\\" value=\\"\\" />
-    <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"password\\" type=\\"text\\" value=\\"\\" />
+    <input className=\\"UserLogin__input\\" onChange={[Function: onChange]} placeholder=\\"password\\" type=\\"password\\" value=\\"\\" />
+    <n accept=\\"image/jpeg, image/png\\" acceptClassName=\\"UserLogin__dropzone_accept\\" className=\\"UserLogin__dropzone\\" maxSize={2097152} onDrop={[Function: bound onDrop]} rejectClassName=\\"UserLogin__dropzone_reject\\" preventDropOnDocument={true} disabled={false} disableClick={false} inputProps={{...}} multiple={true} minSize={0} getDataTransferItems={[Function: getDataTransferItems]}>
+      Upload a profile image
+    </n>
+    <div className=\\"UserLogin__error_hidden\\">
+      Username is already taken.
+    </div>
     <div className=\\"UserLogin__button\\" onClick={[Function: bound handleSignIn]}>
       SIGN UP
     </div>

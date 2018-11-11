@@ -10,7 +10,10 @@ import UserLoginContainer from './UserLoginContainer';
 Enzyme.configure({ adapter: new Adapter() });
 
 const initialState = {
-  errors: { authorisationError: false },
+  errors: {
+    authorisationError: false,
+    signInError: false,
+  },
   activeUser: 'Guest',
 };
 
