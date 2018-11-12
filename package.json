@@ -7,7 +7,7 @@
     "client": "cd lib/client && yarn start",
     "dev": "concurrently --kill-others-on-fail \"PORT=3001 yarn server\" \"yarn client\"",
     "server": "babel-node ./lib/bin/www",
-    "start": "cd lib/client && yarn build && cd ../.. && yarn build && node ./dist/bin/www",
+    "start": "cd lib/client && yarn install && yarn build && cd ../.. && yarn build && node ./dist/bin/www",
     "test": "cd lib/client && yarn test"
   },
   "dependencies": {
